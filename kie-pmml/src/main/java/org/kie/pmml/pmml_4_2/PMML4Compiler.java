@@ -526,6 +526,9 @@ public class PMML4Compiler {
                 List<PMML4Model> models = unit.getModels();
                 models.forEach(model -> {
                     Map.Entry<String, String> inputPojo = model.getMappedMiningPojo();
+                    System.out.println("Model name: " + model.getModelId());
+                    System.out.println("Model RuleUnit name: " + model.getModelRuleUnitName());
+                    System.out.println("RuleUnit class name: " + model.getRuleUnitClassName());
                     Map.Entry<String, String> ruleUnit = model.getMappedRuleUnit();
                     Map.Entry<String, String> outcome = null;
                     if (model.getModelType() == PMML4ModelType.TREE) {
