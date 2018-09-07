@@ -15,53 +15,7 @@
 
 package org.drools.scorecards;
 
-import org.dmg.pmml.pmml_4_2.descr.Extension;
-import org.dmg.pmml.pmml_4_2.descr.Output;
-import org.dmg.pmml.pmml_4_2.descr.OutputField;
-import org.dmg.pmml.pmml_4_2.descr.PMML;
-import org.dmg.pmml.pmml_4_2.descr.Scorecard;
-import org.kie.pmml.pmml_4_2.PMML4Compiler;
-import org.kie.pmml.pmml_4_2.PMML4ExecutionHelper;
-import org.kie.pmml.pmml_4_2.PMML4Helper;
-import org.kie.pmml.pmml_4_2.PMML4ExecutionHelper.PMML4ExecutionHelperFactory;
-import org.kie.pmml.pmml_4_2.extensions.PMMLExtensionNames;
-import org.kie.pmml.pmml_4_2.model.PMML4UnitImpl;
-import org.drools.compiler.compiler.ScoreCardFactory;
-import org.drools.compiler.compiler.ScoreCardProvider;
-import org.drools.core.definitions.InternalKnowledgePackage;
-import org.drools.core.definitions.rule.impl.RuleImpl;
-import org.drools.core.impl.InternalKnowledgeBase;
-import org.drools.core.ruleunit.RuleUnitDescr;
-import org.drools.core.ruleunit.RuleUnitRegistry;
-import org.drools.scorecards.example.Applicant;
-import org.drools.scorecards.pmml.ScorecardPMMLUtils;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.kie.api.KieBase;
-import org.kie.api.KieServices;
-import org.kie.api.builder.KieBuilder;
-import org.kie.api.builder.KieFileSystem;
-import org.kie.api.builder.Results;
-import org.kie.api.definition.type.FactType;
-import org.kie.api.runtime.ClassObjectFilter;
-import org.kie.api.runtime.KieContainer;
-import org.kie.api.runtime.KieSession;
-import org.kie.api.runtime.rule.DataSource;
-import org.kie.api.runtime.rule.FactHandle;
-import org.kie.api.runtime.rule.RuleUnit;
-import org.kie.api.runtime.rule.RuleUnitExecutor;
-import org.kie.internal.builder.KnowledgeBuilderFactory;
-import org.kie.internal.builder.ScoreCardConfiguration;
-import org.kie.internal.io.ResourceFactory;
-import org.kie.internal.utils.KieHelper;
-import org.kie.api.io.Resource;
-import org.kie.api.io.ResourceType;
-import org.kie.api.pmml.PMML4Data;
-import org.kie.api.pmml.PMML4Result;
-import org.kie.api.pmml.PMMLRequestData;
-
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -69,46 +23,63 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.dmg.pmml.pmml_4_2.descr.Extension;
+import org.dmg.pmml.pmml_4_2.descr.Output;
+import org.dmg.pmml.pmml_4_2.descr.OutputField;
+import org.dmg.pmml.pmml_4_2.descr.PMML;
+import org.dmg.pmml.pmml_4_2.descr.Scorecard;
+import org.drools.scorecards.example.Applicant;
+import org.drools.scorecards.pmml.ScorecardPMMLUtils;
+import org.junit.Before;
+import org.junit.Test;
+import org.kie.api.io.Resource;
+import org.kie.api.io.ResourceType;
+import org.kie.api.pmml.PMML4Result;
+import org.kie.api.pmml.PMMLRequestData;
+import org.kie.internal.builder.KnowledgeBuilderFactory;
+import org.kie.internal.builder.ScoreCardConfiguration;
+import org.kie.internal.io.ResourceFactory;
+import org.kie.pmml.pmml_4_2.PMML4Compiler;
+import org.kie.pmml.pmml_4_2.PMML4ExecutionHelper;
+import org.kie.pmml.pmml_4_2.PMML4ExecutionHelper.PMML4ExecutionHelperFactory;
+import org.kie.pmml.pmml_4_2.extensions.PMMLExtensionNames;
+
+import static org.drools.scorecards.ScorecardCompiler.DrlType.EXTERNAL_OBJECT_MODEL;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.drools.scorecards.ScorecardCompiler.DrlType.EXTERNAL_OBJECT_MODEL;
 
-//@Ignore
 public class ExternalObjectModelTest {
-    private static ScorecardCompiler scorecardCompiler;
-    private static ScoreCardProvider scorecardProvider;
+    private ScorecardCompiler scorecardCompiler;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         scorecardCompiler = new ScorecardCompiler(EXTERNAL_OBJECT_MODEL);
-        scorecardProvider = ScoreCardFactory.getScoreCardProvider();
     }
 
-
     @Test
-    public void testPMMLCustomOutput() throws Exception {
+    public void testPMMLCustomOutput() throws IOException {
         PMML pmmlDocument = null;
         String drl = null;
-        if (scorecardCompiler.compileFromExcel(PMMLDocumentTest.class.getResourceAsStream("/scoremodel_externalmodel.xls")) ) {
-            pmmlDocument = scorecardCompiler.getPMMLDocument();
-            assertNotNull( pmmlDocument );
-            PMML4Compiler.dumpModel( pmmlDocument, System.out );
-            drl = scorecardCompiler.getDRL();
-            assertTrue( drl != null && ! drl.isEmpty() );
-            //System.out.println(drl);
-        } else {
-            fail("failed to parse scoremodel Excel.");
+        try (final InputStream inputStream = PMMLDocumentTest.class.getResourceAsStream("/scoremodel_externalmodel.xls")) {
+            if (scorecardCompiler.compileFromExcel(inputStream)) {
+                pmmlDocument = scorecardCompiler.getPMMLDocument();
+                assertNotNull(pmmlDocument);
+                PMML4Compiler.dumpModel(pmmlDocument, System.out);
+                drl = scorecardCompiler.getDRL();
+                assertTrue(drl != null && !drl.isEmpty());
+            } else {
+                fail("failed to parse scoremodel Excel.");
+            }
         }
 
-        for (Object serializable : pmmlDocument.getAssociationModelsAndBaselineModelsAndClusteringModels()){
+        for (final Object serializable : pmmlDocument.getAssociationModelsAndBaselineModelsAndClusteringModels()){
             if (serializable instanceof Scorecard){
-                Scorecard scorecard = (Scorecard)serializable;
-                for (Object obj :scorecard.getExtensionsAndCharacteristicsAndMiningSchemas()){
+                final Scorecard scorecard = (Scorecard)serializable;
+                for (final Object obj :scorecard.getExtensionsAndCharacteristicsAndMiningSchemas()){
                     if ( obj instanceof Output) {
-                        Output output = (Output)obj;
+                        final Output output = (Output)obj;
                         final List<OutputField> outputFields = output.getOutputFields();
                         assertEquals(1, outputFields.size());
                         final OutputField outputField = outputFields.get(0);
@@ -128,83 +99,19 @@ public class ExternalObjectModelTest {
         fail();
     }
 
-
-
     @Test
-    @Ignore(value="Test is duplicate of ScorecardProviderTest.testDrlGenerationWithExternalTypes")
-    public void testDRLExecution() throws Exception {
-        PMML pmmlDocument = null;
-        String drl = null;
-        if (scorecardCompiler.compileFromExcel(PMMLDocumentTest.class.getResourceAsStream("/scoremodel_externalmodel.xls")) ) {
-            pmmlDocument = scorecardCompiler.getPMMLDocument();
-            assertNotNull( pmmlDocument );
-            PMML4Compiler.dumpModel( pmmlDocument, System.out );
-            drl = scorecardCompiler.getDRL();
-            assertTrue( drl != null && ! drl.isEmpty() );
-            //System.out.println(drl);
-        } else {
-            fail("failed to parse scoremodel Excel.");
-        }
+    public void testWithInitialScore() {
+        final Map<String,List<Object>> externalData = new HashMap<>();
+        final List<Object> applicantValues = new ArrayList<>();
 
-        KieServices ks = KieServices.Factory.get();
-        KieFileSystem kfs = ks.newKieFileSystem();
-        kfs.write( ks.getResources().newByteArrayResource( drl.getBytes() )
-                           .setSourcePath( "test_scorecard_rules.drl" )
-                           .setResourceType( ResourceType.DRL ) );
-        KieBuilder kieBuilder = ks.newKieBuilder( kfs );
-        Results res = kieBuilder.buildAll().getResults();
-        System.err.print( res.getMessages() );
-        KieContainer kieContainer = ks.newKieContainer( kieBuilder.getKieModule().getReleaseId() );
-
-        KieBase kbase = kieContainer.getKieBase();
-        KieSession session = kbase.newKieSession();
-
-        Applicant applicant = new Applicant();
-        applicant.setAge(10);
-        session.insert( applicant );
-        session.fireAllRules();
-        session.dispose();
-        //occupation = 0, age = 30, validLicence -1
-        assertEquals(29.0,applicant.getTotalScore(), 0.0);
-
-        session = kbase.newKieSession();
-        applicant = new Applicant();
-        applicant.setOccupation("SKYDIVER");
-        applicant.setAge(0);
-        session.insert( applicant );
-        session.fireAllRules();
-        session.dispose();
-        //occupation = -10, age = +10, validLicense = -1;
-        assertEquals(-1.0, applicant.getTotalScore(), 0.0);
-
-        session = kbase.newKieSession();
-        applicant = new Applicant();
-        applicant.setResidenceState("AP");
-        applicant.setOccupation("TEACHER");
-        applicant.setAge(20);
-        applicant.setValidLicense(true);
-        session.insert( applicant );
-        session.fireAllRules();
-        session.dispose();
-        //occupation = +10, age = +40, state = -10, validLicense = 1
-        assertEquals(41.0,applicant.getTotalScore(), 0.0);
-    }
-
-
-
-    @Test
-    public void testWithInitialScore() throws Exception {
-        Map<String,List<Object>> externalData = new HashMap<>();
-        List<Object> applicantValues = new ArrayList<>();
-
-        Resource resource = ResourceFactory.newClassPathResource("scoremodel_externalmodel.xls");
+        final Resource resource = ResourceFactory.newClassPathResource("scoremodel_externalmodel.xls");
         assertNotNull(resource);
-        ScoreCardConfiguration scconf = KnowledgeBuilderFactory.newScoreCardConfiguration();
+        final ScoreCardConfiguration scconf = KnowledgeBuilderFactory.newScoreCardConfiguration();
         scconf.setUsingExternalTypes(true);
         scconf.setWorksheetName("scorecards_initialscore");
         resource.setConfiguration(scconf);
         resource.setResourceType(ResourceType.SCARD);
-        PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("Sample Score", resource, null, false);
+        final PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("Sample Score", resource, null, false);
         helper.addExternalDataSource("externalBeanApplicant");
         helper.addPossiblePackageName("org.drools.scorecards.example");
 
@@ -246,20 +153,19 @@ public class ExternalObjectModelTest {
         checkResults(141.0, resultHolder);
     }
 
-
     @Test
-    public void testWithReasonCodes() throws Exception {
-        Map<String,List<Object>> externalData = new HashMap<>();
-        List<Object> applicantValues = new ArrayList<>();
+    public void testWithReasonCodes() {
+        final Map<String,List<Object>> externalData = new HashMap<>();
+        final List<Object> applicantValues = new ArrayList<>();
 
-        Resource resource = ResourceFactory.newClassPathResource("scoremodel_externalmodel.xls");
+        final Resource resource = ResourceFactory.newClassPathResource("scoremodel_externalmodel.xls");
         assertNotNull(resource);
-        ScoreCardConfiguration scconf = KnowledgeBuilderFactory.newScoreCardConfiguration();
+        final ScoreCardConfiguration scconf = KnowledgeBuilderFactory.newScoreCardConfiguration();
         scconf.setUsingExternalTypes(true);
         scconf.setWorksheetName("scorecards_reasoncode");
         resource.setConfiguration(scconf);
         resource.setResourceType(ResourceType.SCARD);
-        PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("Sample Score", resource, null, false);
+        final PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("Sample Score", resource, null, false);
         helper.addExternalDataSource("externalBeanApplicant");
         helper.addPossiblePackageName("org.drools.scorecards.example");
 
@@ -300,51 +206,21 @@ public class ExternalObjectModelTest {
     }
 
 
-    private void checkResults(Double expectedTotalScore, PMML4Result resultHolder) {
+    private void checkResults(final Double expectedTotalScore, final PMML4Result resultHolder) {
         assertEquals("OK",resultHolder.getResultCode());
-        Double totalScore = resultHolder.getResultValue("TotalScore", "value", Double.class).orElse(null);
-        assertEquals(expectedTotalScore,totalScore,1e-6);
+        final Double totalScore = resultHolder.getResultValue("TotalScore", "value", Double.class).orElse(null);
+        assertNotNull(totalScore);
+        assertEquals(expectedTotalScore, totalScore,1e-6);
     }
 
-    private void checkResults(Double expectedTotalScore, String expectedReasonCode, List<String> expectedRanking, PMML4Result resultHolder) {
-        Double totalScore = resultHolder.getResultValue("TotalScore", "value", Double.class).orElse(null);
+    private void checkResults(final Double expectedTotalScore, final String expectedReasonCode, final List<String> expectedRanking, final PMML4Result resultHolder) {
+        final Double totalScore = resultHolder.getResultValue("TotalScore", "value", Double.class).orElse(null);
+        assertNotNull(totalScore);
         assertEquals(expectedTotalScore, totalScore, 1e-6);
-        String reasonCode = resultHolder.getResultValue("ReasonCodes", "value", String.class).orElse(null);
+        final String reasonCode = resultHolder.getResultValue("ReasonCodes", "value", String.class).orElse(null);
         assertEquals( expectedReasonCode, reasonCode );
-        Map reasonCodesMap = (Map)resultHolder.getResultValue("ScoreCard", "ranking");
+        final Map reasonCodesMap = (Map)resultHolder.getResultValue("ScoreCard", "ranking");
         assertNotNull( reasonCodesMap );
         assertEquals( expectedRanking, new ArrayList( reasonCodesMap.keySet() ) );
-    }
-
-    protected Class<? extends RuleUnit> getStartingRuleUnit(String startingRule, InternalKnowledgeBase ikb, List<String> possiblePackages) {
-        RuleUnitRegistry unitRegistry = ikb.getRuleUnitRegistry();
-        Map<String, InternalKnowledgePackage> pkgs = ikb.getPackagesMap();
-        RuleImpl ruleImpl = null;
-        for (String pkgName : possiblePackages) {
-            if (pkgs.containsKey(pkgName)) {
-                InternalKnowledgePackage pkg = pkgs.get(pkgName);
-                ruleImpl = pkg.getRule(startingRule);
-                if (ruleImpl != null) {
-                    RuleUnitDescr descr = unitRegistry.getRuleUnitFor(ruleImpl).orElse(null);
-                    if (descr != null) {
-                        return descr.getRuleUnitClass();
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
-    protected List<String> calculatePossiblePackageNames(String modelId, String... knownPackageNames) {
-        List<String> packageNames = new ArrayList<>();
-        String javaModelId = modelId.replaceAll("\\s", "");
-        if (knownPackageNames != null && knownPackageNames.length > 0) {
-            for (String knownPkgName : knownPackageNames) {
-                packageNames.add(knownPkgName + "." + javaModelId);
-            }
-        }
-        String basePkgName = PMML4UnitImpl.DEFAULT_ROOT_PACKAGE + "." + javaModelId;
-        packageNames.add(basePkgName);
-        return packageNames;
     }
 }

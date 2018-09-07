@@ -16,15 +16,12 @@
 package org.drools.scorecards;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.kie.api.KieBase;
 import org.kie.api.KieServices;
-import org.kie.api.definition.type.FactType;
 import org.kie.api.pmml.PMML4Result;
 import org.kie.api.pmml.PMMLRequestData;
 import org.kie.api.runtime.KieContainer;
-import org.kie.api.runtime.KieSession;
 import org.kie.pmml.pmml_4_2.PMML4ExecutionHelper;
 import org.kie.pmml.pmml_4_2.PMML4ExecutionHelper.PMML4ExecutionHelperFactory;
 import org.kie.pmml.pmml_4_2.PMMLRequestDataBuilder;
@@ -40,40 +37,42 @@ public class ScorecardsKModuleTest {
 
     @Test
     public void testScorecardFromKModule2() {
-        KieServices ks = KieServices.Factory.get();
-        KieContainer kContainer = ks.getKieClasspathContainer();
-        KieBase kBase = kContainer.getKieBase("namedkiesession");
+        final KieServices ks = KieServices.Factory.get();
+        final KieContainer kContainer = ks.getKieClasspathContainer();
+        final KieBase kBase = kContainer.getKieBase("namedkiesession");
         assertNotNull(kBase);
 
-        PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("SampleScore", kBase);
+        final PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("SampleScore", kBase);
         helper.addPossiblePackageName("org.drools.scorecards.example");
-        PMMLRequestData request = new PMMLRequestDataBuilder("123", helper.getModelName())
+        final PMMLRequestData request = new PMMLRequestDataBuilder("123", helper.getModelName())
                 .addParameter("age", 10.0, Double.class)
                 .addParameter("validLicense", false, Boolean.class)
                 .build();
-        PMML4Result resultHolder = helper.submitRequest(request);
+        final PMML4Result resultHolder = helper.submitRequest(request);
         assertEquals("OK", resultHolder.getResultCode());
-        Double calcScore = resultHolder.getResultValue("CalculatedScore", "value", Double.class).orElse(null);
+        final Double calcScore = resultHolder.getResultValue("CalculatedScore", "value", Double.class).orElse(null);
+        assertNotNull(calcScore);
         assertEquals(29.0, calcScore, 1e-6);
     }
 
     @Test
     public void testScorecardFromKBase2() {
-        KieServices ks = KieServices.Factory.get();
-        KieContainer kContainer = ks.getKieClasspathContainer();
-        KieBase kBase = kContainer.getKieBase("kbase2");
+        final KieServices ks = KieServices.Factory.get();
+        final KieContainer kContainer = ks.getKieClasspathContainer();
+        final KieBase kBase = kContainer.getKieBase("kbase2");
         assertNotNull(kBase);
-        PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("SampleScore", kBase);
+        final PMML4ExecutionHelper helper = PMML4ExecutionHelperFactory.getExecutionHelper("SampleScore", kBase);
         helper.addPossiblePackageName("org.drools.scorecards.example");
-        PMMLRequestData request = new PMMLRequestDataBuilder("123", helper.getModelName())
+        final PMMLRequestData request = new PMMLRequestDataBuilder("123", helper.getModelName())
                 .addParameter("age", 50.0, Double.class)
                 .addParameter("occupation", "PROGRAMMER", String.class)
                 .addParameter("validLicense", true, Boolean.class)
                 .build();
 
-        PMML4Result resultHolder = helper.submitRequest(request);
+        final PMML4Result resultHolder = helper.submitRequest(request);
         assertEquals("OK", resultHolder.getResultCode());
-        Double calcScore = resultHolder.getResultValue("CalculatedScore", "value", Double.class).orElse(null);
+        final Double calcScore = resultHolder.getResultValue("CalculatedScore", "value", Double.class).orElse(null);
+        assertNotNull(calcScore);
         assertEquals(30.0, calcScore, 1e-6);
     }
 }
