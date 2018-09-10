@@ -65,10 +65,10 @@
     <module>drools-model</module>
     <module>kie-dmn</module>
     <module>kie-pmml</module>
-    <module>drools-scorecards</module>
     <module>drools-examples-api</module>
     <module>drools-examples-cdi</module>
     <module>drools-workbench-models</module>
+    <module>drools-scorecards</module>
     <module>drools-test-coverage</module>
   </modules>
 
