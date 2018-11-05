@@ -4,4 +4,4 @@ jdk:
   - openjdk11
 os:
   - linux
-  - windows
+#  - windows
