@@ -9133,5 +9133,7 @@ public class Misc2Test extends CommonTestMethodBase {
         int fired = ksession.fireAllRules();
 
         assertEquals(1, fired);
+
+        fail();
     }
 }
