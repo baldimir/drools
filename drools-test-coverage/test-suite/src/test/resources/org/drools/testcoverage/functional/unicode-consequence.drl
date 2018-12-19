@@ -1,0 +1,10 @@
+package org.drools.testcoverage.functional;
+
+import org.drools.testcoverage.common.model.Person;
+
+rule R
+when
+    $p: Person()
+then
+    $p.setName("Rückfrage");
+end
