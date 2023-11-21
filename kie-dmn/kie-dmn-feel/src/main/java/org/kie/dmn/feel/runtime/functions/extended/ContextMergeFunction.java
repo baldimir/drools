@@ -58,4 +58,8 @@ public class ContextMergeFunction extends BaseFEELFunction {
         return errors.length() == 0 ? FEELFnResult.ofResult(Collections.unmodifiableMap(result)) : FEELFnResult.ofError(new InvalidParametersEvent(FEELEvent.Severity.ERROR, errors.toString()));
     }
 
+    public FEELFnResult<Map<String, Object>> invoke(@ParameterName("contexts") Object context) {
+        return invoke(List.of(context));
+    }
+
 }
