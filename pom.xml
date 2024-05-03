@@ -91,9 +91,9 @@
   </pluginRepositories>
 
   <scm>
-    <connection>scm:git:https://github.com/apache/incubator-kie-drools.git</connection>
-    <developerConnection>scm:git:git@github.com:apache/incubator-kie-drools.git</developerConnection>
-    <url>https://github.com/apache/incubator-kie-drools</url>
+    <connection>scm:git:https://github.com/baldimir/drools.git</connection>
+    <developerConnection>scm:git:git@github.com:baldimir/drools.git</developerConnection>
+    <url>https://github.com/baldimir/drools</url>
   </scm>
 
   <ciManagement>
