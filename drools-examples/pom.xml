@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.kie</groupId>
     <artifactId>drools-build-parent</artifactId>
-    <version>999-SNAPSHOT</version>
+    <version>999</version>
     <relativePath>../build-parent/pom.xml</relativePath>
   </parent>
 
@@ -52,7 +52,7 @@
             <argument>-Xms1024M</argument>
             <argument>-Xmx1024M</argument>
             <argument>-cp</argument>
-            <classpath/>
+            <classpath />
             <argument>org.drools.benchmark.waltz.WaltzBenchmark</argument>
             <argument>waltz12.dat</argument>
           </arguments>

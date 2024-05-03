@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.kie</groupId>
     <artifactId>kie-core-bom</artifactId>
-    <version>999-SNAPSHOT</version>
+    <version>999</version>
     <relativePath>../kie-core-bom/pom.xml</relativePath>
   </parent>
 
@@ -24,6 +22,7 @@
     <connection>scm:git:https://github.com/apache/incubator-kie-drools.git</connection>
     <developerConnection>scm:git:git@github.com:apache/incubator-kie-drools.git</developerConnection>
     <url>https://github.com/apache/incubator-kie-drools</url>
+    <tag>drools-999-testing-release-plugin</tag>
   </scm>
   <issueManagement>
     <system>GitHub Issues</system>
@@ -62,7 +61,7 @@
   </mailingLists>
 
   <!-- IMPORTANT: Do not declare any build things here! Declare them in kie-user-bom-parent. -->
-  <build/>
+  <build />
 
   <dependencyManagement>
     <dependencies>
