@@ -631,9 +631,14 @@ public class ConstraintParser {
 
         if ( isLogicalOperator( operator ) && isCombinable( binaryExpr ) ) {
             DrlxParseResult leftResult = compileToJavaRecursive(patternType, bindingId, constraint, binaryExpr.getLeft(), hasBind, isPositional );
-            Expression rightExpr = binaryExpr.getRight() instanceof HalfPointFreeExpr ?
-                    completeHalfExpr( (( PointFreeExpr ) binaryExpr.getLeft()).getLeft(), ( HalfPointFreeExpr ) binaryExpr.getRight(), context) :
-                    binaryExpr.getRight();
+            Expression rightExpr;
+            if (binaryExpr.getRight() instanceof HalfPointFreeExpr) {
+                rightExpr = completeHalfExpr( (( PointFreeExpr ) binaryExpr.getLeft()).getLeft(), ( HalfPointFreeExpr ) binaryExpr.getRight(), context);
+            } else if (binaryExpr.getLeft() instanceof BinaryExpr && binaryExpr.getRight() instanceof HalfBinaryExpr) {
+                rightExpr = completeHalfBinaryExpr((BinaryExpr) binaryExpr.getLeft(), (HalfBinaryExpr) binaryExpr.getRight(), context);
+            } else {
+                rightExpr = binaryExpr.getRight();
+            }
             DrlxParseResult rightResult = compileToJavaRecursive(patternType, bindingId, constraint, rightExpr, hasBind, isPositional );
             return isMultipleResult(leftResult, operator, rightResult) ?
                     createMultipleDrlxParseSuccess( operator, ( DrlxParseSuccess ) leftResult, ( DrlxParseSuccess ) rightResult ) :
@@ -824,12 +829,17 @@ public class ConstraintParser {
     }
 
     private boolean isCombinable( BinaryExpr binaryExpr ) {
-        return !(binaryExpr.getRight() instanceof HalfBinaryExpr) && ( !(binaryExpr.getRight() instanceof HalfPointFreeExpr) || binaryExpr.getLeft() instanceof PointFreeExpr );
+        return ( !(binaryExpr.getRight() instanceof HalfPointFreeExpr) || binaryExpr.getLeft() instanceof PointFreeExpr );
     }
 
     private static PointFreeExpr completeHalfExpr(Expression left, HalfPointFreeExpr halfRight, RuleContext context) {
         ParserLogUtils.logHalfConstraintWarn(halfRight, Optional.of(context));
         return new PointFreeExpr( halfRight.getTokenRange().orElse( null ), left, halfRight.getRight(), halfRight.getOperator(), halfRight.isNegated(), halfRight.getArg1(), halfRight.getArg2(), halfRight.getArg3(), halfRight.getArg4() );
+    }
+
+    private static BinaryExpr completeHalfBinaryExpr(BinaryExpr left, HalfBinaryExpr halfRight, RuleContext context) {
+        ParserLogUtils.logHalfConstraintWarn(halfRight, Optional.of(context));
+        return new BinaryExpr(left.getLeft(), halfRight.getRight(), halfRight.getOperator().toBinaryExprOperator());
     }
 
     private static String getExpressionSymbol(Expression expr) {
