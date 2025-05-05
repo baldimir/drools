@@ -829,7 +829,7 @@ public class ConstraintParser {
     }
 
     private boolean isCombinable( BinaryExpr binaryExpr ) {
-        return ( !(binaryExpr.getRight() instanceof HalfPointFreeExpr) || binaryExpr.getLeft() instanceof PointFreeExpr );
+        return !(!(binaryExpr.getLeft() instanceof BinaryExpr) && binaryExpr.getRight() instanceof HalfBinaryExpr) && ( !(binaryExpr.getRight() instanceof HalfPointFreeExpr) || binaryExpr.getLeft() instanceof PointFreeExpr );
     }
 
     private static PointFreeExpr completeHalfExpr(Expression left, HalfPointFreeExpr halfRight, RuleContext context) {
