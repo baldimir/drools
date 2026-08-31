@@ -86,7 +86,7 @@ class ValidatorTest extends AbstractValidatorTest {
     @Test
     void dryRun() {
         DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string.dmn", DMNInputRuntimeTest.class);
-        DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn", "_0001-input-data-string");
+        DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn", "_0001-input-data-string");
         assertThat(dmnModel).isNotNull();
 
         Definitions definitions = dmnModel.getDefinitions();

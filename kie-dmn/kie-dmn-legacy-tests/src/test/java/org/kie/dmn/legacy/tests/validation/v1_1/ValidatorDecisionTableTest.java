@@ -60,7 +60,7 @@ class ValidatorDecisionTableTest
     void dtable_empty_entry_DefintionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("DTABLE_EMPTY_ENTRY.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DTABLE_PRIORITY_MISSING_OUTVALS"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -91,7 +91,7 @@ class ValidatorDecisionTableTest
     void dtable_multipleout_name_DefinitionsInput() {
         List<DMNMessage> validate = validator.validate(
                 getDefinitions( "DTABLE_MULTIPLEOUTPUT_WRONG_OUTPUT.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "DTABLE_MULTIPLEOUTPUT_WRONG_OUTPUT"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(6);
@@ -120,7 +120,7 @@ class ValidatorDecisionTableTest
     void dtable_priority_missing_outvals_DefinitionsInput() {
         List<DMNMessage> validate = validator.validate(
                 getDefinitions( "DTABLE_PRIORITY_MISSING_OUTVALS.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "DTABLE_PRIORITY_MISSING_OUTVALS"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).isNotEmpty();
@@ -149,7 +149,7 @@ class ValidatorDecisionTableTest
     void dtable_singleout_noname_DefinitionsInput() {
         List<DMNMessage> validate = validator.validate(
                 getDefinitions("DTABLE_SINGLEOUTPUT_WRONG_OUTPUT.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DTABLE_SINGLEOUTPUT_WRONG_OUTPUT"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);

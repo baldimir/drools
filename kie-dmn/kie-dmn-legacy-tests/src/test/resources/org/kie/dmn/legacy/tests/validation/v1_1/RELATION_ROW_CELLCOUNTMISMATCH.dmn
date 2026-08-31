@@ -21,7 +21,7 @@
 <!-- THIS IS AN OLD VERSION OF DMN EXAMPLE/TEST, PLEASE USE THE MORE RECENT VERSION -->
 
 <definitions id="RELATION_ROW_CELLCOUNTMISMATCH" name="RELATION_ROW_CELLCOUNTMISMATCH"
-             namespace="https://github.com/kiegroup/kie-dmn"
+             namespace="https://github.com/kubesmarts/kie-dmn"
              xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
              xmlns:feel="http://www.omg.org/spec/FEEL/20140401"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

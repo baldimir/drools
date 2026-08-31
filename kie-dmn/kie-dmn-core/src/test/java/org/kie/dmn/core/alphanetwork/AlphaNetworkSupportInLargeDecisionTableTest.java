@@ -73,7 +73,7 @@ public class AlphaNetworkSupportInLargeDecisionTableTest {
         final KieContainer container = ks.newKieContainer(releaseId);
         DMNRuntime dmnRuntime = KieRuntimeFactory.of(container.getKieBase()).get(DMNRuntime.class);
 
-        DMNModel dmnModel = dmnRuntime.getModel("https://github.com/kiegroup/kie-dmn", "decision-table-name");
+        DMNModel dmnModel = dmnRuntime.getModel("https://github.com/kubesmarts/kie-dmn", "decision-table-name");
 
         DMNContext dmnContext = dmnRuntime.newContext();
         dmnContext.set("Age", BigDecimal.valueOf(18));
@@ -90,7 +90,7 @@ public class AlphaNetworkSupportInLargeDecisionTableTest {
 
         dmnBuilder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         dmnBuilder.append("<definitions id=\"decision-table-id\" name=\"decision-table-name\"\n");
-        dmnBuilder.append("             namespace=\"https://github.com/kiegroup/kie-dmn\"\n");
+        dmnBuilder.append("             namespace=\"https://github.com/kubesmarts/kie-dmn\"\n");
         dmnBuilder.append("             xmlns=\"http://www.omg.org/spec/DMN/20151101/dmn.xsd\"\n");
         dmnBuilder.append("             xmlns:feel=\"http://www.omg.org/spec/FEEL/20140401\"\n");
         dmnBuilder.append("             xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n");

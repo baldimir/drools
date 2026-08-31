@@ -56,7 +56,7 @@ public class AnnotationsTest extends BaseVariantTest {
         testConfig = conf;
         strongly = testConfig.isTypeSafe();
         final DMNRuntime runtime = createRuntime("NSEW.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_FBA17BF4-BC04-4C16-9305-40E8B4B2FECB", "NSEW");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_FBA17BF4-BC04-4C16-9305-40E8B4B2FECB", "NSEW");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).withFailMessage(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -131,7 +131,7 @@ public class AnnotationsTest extends BaseVariantTest {
         testConfig = conf;
         strongly = testConfig.isTypeSafe();
         final DMNRuntime runtime = createRuntime("nextDays.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_8A1F9719-02AA-4517-97D4-5C4F5D22FE82", "nextDays");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_8A1F9719-02AA-4517-97D4-5C4F5D22FE82", "nextDays");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).withFailMessage(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

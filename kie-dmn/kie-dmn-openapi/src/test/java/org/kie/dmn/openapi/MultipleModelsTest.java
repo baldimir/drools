@@ -38,7 +38,7 @@ class MultipleModelsTest extends BaseDMNOASTest {
                                                                         "Traffic Violation.dmn");
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_FBA17BF4-BC04-4C16-9305-40E8B4B2FECB", "NSEW");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_FBA17BF4-BC04-4C16-9305-40E8B4B2FECB", "NSEW");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 
@@ -56,7 +56,7 @@ class MultipleModelsTest extends BaseDMNOASTest {
                                                                         "Traffic Violation.dmn");
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        DMNModel modelUnderTest = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
+        DMNModel modelUnderTest = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 

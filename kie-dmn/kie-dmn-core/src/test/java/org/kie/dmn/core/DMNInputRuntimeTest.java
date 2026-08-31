@@ -103,7 +103,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
     void inputStringEvaluateAll(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn",
                 "_0001-input-data" + "-string");
         assertThat(dmnModel).isNotNull();
 
@@ -125,7 +125,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
     void inputStringEvaluateDecisionByName(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn",
                 "_0001-input-data" + "-string");
         assertThat(dmnModel).isNotNull();
 
@@ -162,7 +162,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
     void inputStringEvaluateDecisionById(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn",
                 "_0001-input-data" + "-string");
         assertThat(dmnModel).isNotNull();
 
@@ -200,7 +200,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0003-input-data-string-allowed-values.dmn",
                 this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn",
                 "0003-input-data-string" + "-allowed-values");
         assertThat(dmnModel).isNotNull();
 
@@ -231,7 +231,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
     private void testInputStringNotAllowedValuesEvaluateAll(final Object inputValue) {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0003-input-data-string-allowed-values.dmn",
                 this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn",
                 "0003-input-data-string" + "-allowed-values");
         assertThat(dmnModel).isNotNull();
 
@@ -266,7 +266,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
 
     private void inputNumberEvaluateAll(final String testDMNFileName, final String modelName) {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime(testDMNFileName, this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", modelName);
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", modelName);
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -286,7 +286,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
     void getRequiredInputsByName(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn",
                 "_0001-input-data" + "-string");
         assertThat(dmnModel).isNotNull();
 
@@ -304,7 +304,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
     void getRequiredInputsById(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn",
                 "_0001-input-data" + "-string");
         assertThat(dmnModel).isNotNull();
 
@@ -322,7 +322,7 @@ public class DMNInputRuntimeTest extends BaseInterpretedVsCompiledTest {
     void nonexistantInputNodeName(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn",
                 "_0001-input-data" + "-string");
         assertThat(dmnModel).isNotNull();
 

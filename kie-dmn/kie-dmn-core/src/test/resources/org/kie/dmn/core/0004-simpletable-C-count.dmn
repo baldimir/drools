@@ -17,7 +17,7 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   -->
-<semantic:definitions xmlns="https://github.com/kiegroup/kie-dmn"
+<semantic:definitions xmlns="https://github.com/kubesmarts/kie-dmn"
                       xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
                       xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
                       xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
@@ -25,7 +25,7 @@
                       xmlns:semantic="https://www.omg.org/spec/DMN/20240513/MODEL/"
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                       id="_edbd2d8e-a5a8-4660-9bb9-adaa792d900c"
-                      namespace="https://github.com/kiegroup/kie-dmn"
+                      namespace="https://github.com/kubesmarts/kie-dmn"
                       name="0004-simpletable-C-count"
                       >
    <semantic:decision id="_0004-simpletable-C-count" name="_0004-simpletable-C-count">

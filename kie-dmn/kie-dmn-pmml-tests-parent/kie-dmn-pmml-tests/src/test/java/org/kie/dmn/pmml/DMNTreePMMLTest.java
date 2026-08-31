@@ -60,7 +60,7 @@ public abstract class DMNTreePMMLTest {
     }
 
     private String evaluateWeatherDecision(final DMNRuntime runtime, final Integer temperature, final Integer humidity) {
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_FAA4232D-9D61-4089-BB05-5F5D7C1AECE1", "TestTreeDMN");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_FAA4232D-9D61-4089-BB05-5F5D7C1AECE1", "TestTreeDMN");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).isFalse();
 

@@ -36,7 +36,7 @@ class DMNBuildFromReaderTest {
         // DROOLS-5127
         String dmn =
                 "<definitions id=\"business-knowledge-model\" name=\"business-knowledge-model\"\n" +
-                "             namespace=\"https://github.com/kiegroup/kie-dmn\"\n" +
+                "             namespace=\"https://github.com/kubesmarts/kie-dmn\"\n" +
                 "             xmlns=\"http://www.omg.org/spec/DMN/20151101/dmn.xsd\"\n" +
                 "             xmlns:feel=\"http://www.omg.org/spec/FEEL/20140401\">\n" +
                 "  <decision id=\"decision0\" name=\"decision0\">\n" +

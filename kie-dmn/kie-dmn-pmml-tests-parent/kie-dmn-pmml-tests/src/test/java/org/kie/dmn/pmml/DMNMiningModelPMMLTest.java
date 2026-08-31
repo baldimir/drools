@@ -53,7 +53,7 @@ public abstract class DMNMiningModelPMMLTest {
 
     private BigDecimal evaluateMiningModelDecision(final DMNRuntime runtime, final double input1, final double input2,
                                                    final double input3) {
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_0E8EC382-BB89-4877-8D37-A59B64285F05", "MiningModelDMN");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_0E8EC382-BB89-4877-8D37-A59B64285F05", "MiningModelDMN");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).isFalse();
 

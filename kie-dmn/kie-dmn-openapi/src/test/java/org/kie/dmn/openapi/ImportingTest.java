@@ -38,7 +38,7 @@ class ImportingTest extends BaseDMNOASTest {
                                                                         "importingSum.dmn");
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        final DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_1D35A3BF-1DBD-4CD0-882A-CA068C6F2A67",
+        final DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_1D35A3BF-1DBD-4CD0-882A-CA068C6F2A67",
                                                    "importingSum");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
@@ -49,7 +49,7 @@ class ImportingTest extends BaseDMNOASTest {
         JsonNode mutOutputSet = syntheticJSONSchema.get("definitions").get(mutOutputSetName);
         assertThat((Iterable<String>) () -> mutOutputSet.get("properties").fieldNames()).doesNotContain("baseSum Decision");
 
-        final DMNModel importedModel = runtime.getModel("https://kiegroup.org/dmn/_FCC62740-4998-47A2-B5F2-CB3E15C98419",
+        final DMNModel importedModel = runtime.getModel("https://kubesmarts.org/dmn/_FCC62740-4998-47A2-B5F2-CB3E15C98419",
                                                         "baseSum");
         String importedOutputSetName = result.getNamingPolicy().getName(result.lookupIOSetsByModel(importedModel).getOutputSet());
         JsonNode importedOutputSet = syntheticJSONSchema.get("definitions").get(importedOutputSetName);

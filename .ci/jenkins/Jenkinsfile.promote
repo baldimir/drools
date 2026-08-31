@@ -222,7 +222,7 @@ void uploadFileMgmt(String directory) {
 }
 
 boolean isNotTestingBuild() {
-    return getGitAuthor() == 'kiegroup'
+    return getGitAuthor() == 'kubesmarts'
 }
 
 boolean isMainStream() {

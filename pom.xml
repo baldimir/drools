@@ -52,9 +52,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:https://github.com/kiegroup/drools.git</connection>
-    <developerConnection>scm:git:https://github.com/kiegroup/drools.git</developerConnection>
-    <url>https://github.com/kiegroup/drools</url>
+    <connection>scm:git:https://github.com/kubesmarts/drools.git</connection>
+    <developerConnection>scm:git:https://github.com/kubesmarts/drools.git</developerConnection>
+    <url>https://github.com/kubesmarts/drools</url>
   </scm>
 
   <ciManagement>

@@ -59,7 +59,7 @@ class ValidatorAuthorityRequirementTest extends AbstractValidatorTest {
     void auth_req_missing_dependency_req_auth_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("authorityrequirement/AUTHREQ_MISSING_DEPENDENCY_REQ_AUTH.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "AUTHREQ_MISSING_DEPENDENCY_REQ_AUTH"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -90,7 +90,7 @@ class ValidatorAuthorityRequirementTest extends AbstractValidatorTest {
     void auth_req_missing_dependency_req_dec_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("authorityrequirement/AUTHREQ_MISSING_DEPENDENCY_REQ_DEC.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "AUTHREQ_MISSING_DEPENDENCY_REQ_DEC"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -121,7 +121,7 @@ class ValidatorAuthorityRequirementTest extends AbstractValidatorTest {
     void auth_req_missing_dependency_req_input_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("authorityrequirement/AUTHREQ_MISSING_DEPENDENCY_REQ_INPUT.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "AUTHREQ_MISSING_DEPENDENCY_REQ_INPUT"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -152,7 +152,7 @@ class ValidatorAuthorityRequirementTest extends AbstractValidatorTest {
     void authreq_dep_req_auth_not_knowledgesource_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("authorityrequirement/AUTHREQ_DEP_REQ_AUTH_NOT_KNOWLEDGESOURCE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "AUTHREQ_DEP_REQ_AUTH_NOT_KNOWLEDGESOURCE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -183,7 +183,7 @@ class ValidatorAuthorityRequirementTest extends AbstractValidatorTest {
     void authreq_dep_req_dec_not_decision_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("authorityrequirement/AUTHREQ_DEP_REQ_DEC_NOT_DECISION.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "AUTHREQ_DEP_REQ_DEC_NOT_DECISION"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -214,7 +214,7 @@ class ValidatorAuthorityRequirementTest extends AbstractValidatorTest {
     void authreq_dep_req_input_not_input_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("authorityrequirement/AUTHREQ_DEP_REQ_INPUT_NOT_INPUT.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "AUTHREQ_DEP_REQ_INPUT_NOT_INPUT"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);

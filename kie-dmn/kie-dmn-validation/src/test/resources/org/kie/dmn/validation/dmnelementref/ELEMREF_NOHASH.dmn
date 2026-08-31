@@ -19,7 +19,7 @@
   -->
 
 
-<semantic:definitions xmlns="https://github.com/kiegroup/kie-dmn"
+<semantic:definitions xmlns="https://github.com/kubesmarts/kie-dmn"
                       xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
                       xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
                       xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
@@ -28,7 +28,7 @@
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                       id="ELEMREF_NOHASH"
                       name="ELEMREF_NOHASH"
-                      namespace="https://github.com/kiegroup/kie-dmn">
+                      namespace="https://github.com/kubesmarts/kie-dmn">
    <semantic:decision id="_0004-simpletable-U" name="simpletable-U">
       <semantic:variable name="simpletable-U" typeRef="string"/>
       <semantic:informationRequirement>

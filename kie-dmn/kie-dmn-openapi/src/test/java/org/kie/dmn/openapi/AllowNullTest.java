@@ -35,7 +35,7 @@ class AllowNullTest extends BaseDMNOASTest {
         final DMNRuntime runtime = createRuntime("vowels.dmn", this.getClass());
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_0885BF04-027C-4743-9427-2668DA3AD472", "vowels");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_0885BF04-027C-4743-9427-2668DA3AD472", "vowels");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 
@@ -50,7 +50,7 @@ class AllowNullTest extends BaseDMNOASTest {
         final DMNRuntime runtime = createRuntime("vowelsAllowNull.dmn", this.getClass());
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_0885BF04-027C-4743-9427-2668DA3AD472", "vowels");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_0885BF04-027C-4743-9427-2668DA3AD472", "vowels");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 

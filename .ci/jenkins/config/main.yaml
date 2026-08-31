@@ -20,7 +20,7 @@ seed:
     git:
       repository: drools
       author:
-        name: kiegroup
+        name: kubesmarts
         credentials_id: kie-ci4
       branch: main
     path: .ci/jenkins/config/branch.yaml

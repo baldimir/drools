@@ -241,7 +241,7 @@ public class DMNRuntimeTypeCheckTest extends BaseInterpretedVsCompiledTest {
         final KieContainer kieContainer = KieHelper.getKieContainer(ks.newReleaseId("org.kie", "dmn-test-" + UUID.randomUUID(), "1.0"),
                                                                     ks.getResources().newClassPathResource("notypecheck/sqrtstring.dmn", this.getClass()));
         final DMNRuntime runtime = kieContainer.newKieSession().getKieRuntime(DMNRuntime.class);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_476F07A1-F787-4079-9A68-EF1C6030A3EF", "sqrtstring");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_476F07A1-F787-4079-9A68-EF1C6030A3EF", "sqrtstring");
 
         final DMNContext ctx = runtime.newContext();
         ctx.set("value", "47");

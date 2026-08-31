@@ -43,7 +43,7 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape xmlns:p0="https://kiegroup.org/dmn/_5C7155CF-C222-48D1-9272-582A6E7AA4C7" id="dmnshape-drg-_9D120627-DE5E-4824-BFC7-92DECE8237EB" dmnElementRef="p0:_9D120627-DE5E-4824-BFC7-92DECE8237EB" isCollapsed="false">
+      <dmndi:DMNShape xmlns:p0="https://kubesmarts.org/dmn/_5C7155CF-C222-48D1-9272-582A6E7AA4C7" id="dmnshape-drg-_9D120627-DE5E-4824-BFC7-92DECE8237EB" dmnElementRef="p0:_9D120627-DE5E-4824-BFC7-92DECE8237EB" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
@@ -52,7 +52,7 @@
         <dc:Bounds x="436" y="337" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape xmlns:p1="https://kiegroup.org/dmn/_5C7155CF-C222-48D1-9272-582A6E7AA4C7" id="dmnshape-drg-_9D967CD1-5E8A-42BD-A009-B05875797F27" dmnElementRef="p1:_9D967CD1-5E8A-42BD-A009-B05875797F27" isCollapsed="false">
+      <dmndi:DMNShape xmlns:p1="https://kubesmarts.org/dmn/_5C7155CF-C222-48D1-9272-582A6E7AA4C7" id="dmnshape-drg-_9D967CD1-5E8A-42BD-A009-B05875797F27" dmnElementRef="p1:_9D967CD1-5E8A-42BD-A009-B05875797F27" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
@@ -61,7 +61,7 @@
         <dc:Bounds x="676" y="337" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNEdge xmlns:p2="https://kiegroup.org/dmn/_5C7155CF-C222-48D1-9272-582A6E7AA4C7" id="dmnedge-drg-_108DAD3B-CF9D-456E-A9B2-4B4943B4F257-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="p2:_108DAD3B-CF9D-456E-A9B2-4B4943B4F257">
+      <dmndi:DMNEdge xmlns:p2="https://kubesmarts.org/dmn/_5C7155CF-C222-48D1-9272-582A6E7AA4C7" id="dmnedge-drg-_108DAD3B-CF9D-456E-A9B2-4B4943B4F257-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="p2:_108DAD3B-CF9D-456E-A9B2-4B4943B4F257">
         <di:waypoint x="486" y="337"/>
         <di:waypoint x="726" y="387"/>
       </dmndi:DMNEdge>

@@ -35,7 +35,7 @@ class PersonTest extends BaseDMNOASTest {
         final DMNRuntime runtime = createRuntime("personF.dmn", this.getClass());
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_4564F2BC-888D-472A-A38C-A861DA49A780", "personF");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_4564F2BC-888D-472A-A38C-A861DA49A780", "personF");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 

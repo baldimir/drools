@@ -17,11 +17,11 @@
   specific language governing permissions and limitations
   under the License.
   -->
-<semantic:definitions xmlns="https://github.com/kiegroup/drools/kie-dmn"
+<semantic:definitions xmlns="https://github.com/kubesmarts/drools/kie-dmn"
                       xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/"
                       id="_0001-input-data-string"
                       name="_0001-input-data-string"
-                      namespace="https://github.com/kiegroup/drools/kie-dmn">
+                      namespace="https://github.com/kubesmarts/drools/kie-dmn">
    <semantic:decision name="Greeting Message" id="d_GreetingMessage">
       <semantic:variable name="Greeting Message" typeRef="string"/>
       <semantic:informationRequirement>

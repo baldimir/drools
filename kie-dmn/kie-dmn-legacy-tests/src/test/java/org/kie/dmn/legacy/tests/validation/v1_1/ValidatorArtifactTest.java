@@ -59,7 +59,7 @@ class ValidatorArtifactTest extends AbstractValidatorTest {
     void assoc_references_not_empty_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "artifact/ASSOC_REFERENCES_NOT_EMPTY.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "ASSOC_REFERENCES_NOT_EMPTY"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);

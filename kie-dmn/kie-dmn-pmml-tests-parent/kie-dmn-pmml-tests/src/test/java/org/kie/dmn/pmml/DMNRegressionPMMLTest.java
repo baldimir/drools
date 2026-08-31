@@ -49,7 +49,7 @@ public abstract class DMNRegressionPMMLTest {
     }
 
     private BigDecimal evaluateRegressionDecision(final DMNRuntime runtime, final Double fld1, final Double fld2, final String fld3) {
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456", "TestRegressionDMN");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456", "TestRegressionDMN");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).isFalse();
 

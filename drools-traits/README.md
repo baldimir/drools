@@ -52,9 +52,9 @@ When I moved the classes between modules I tried to keep the source code identic
 
 `org.drools.base.factmodel.traits.TraitFactory` was transformed into an interface with just one method, and it was created a 
 `org.drools.traits.core.factmodel.TraitFactoryImpl` inside the `drools-traits` module.
-https://github.com/kiegroup/drools/pull/2887/files#diff-08cd5643f232535394581edeab619a00
+https://github.com/kubesmarts/drools/pull/2887/files#diff-08cd5643f232535394581edeab619a00
 
-Take a look at another example such as `TraitRegistry` https://github.com/kiegroup/drools/pull/2887/files#diff-6a70e4d76093ef8e591283577874b074R7
+Take a look at another example such as `TraitRegistry` https://github.com/kubesmarts/drools/pull/2887/files#diff-6a70e4d76093ef8e591283577874b074R7
 
 If a class or an interface was used only by traits specific code, I moved it inside the `drools-traits` module.
 
@@ -63,7 +63,7 @@ Injecting Components
 
 To use traits, you must instantiate traits-specific classes using our service loader mechanism.
 The `kie.conf` file provided as an example in the `drools-traits` supports the execution of all the traits related tests in the original modules 
-https://github.com/kiegroup/drools/pull/2887/files#diff-ff3ee1dbc977e7b1dd4cfb16c52cbfca
+https://github.com/kubesmarts/drools/pull/2887/files#diff-ff3ee1dbc977e7b1dd4cfb16c52cbfca
 
 Currently three components are needed
 ```
@@ -83,9 +83,9 @@ Subtyping and Factories
 `drools-core` delegates most of the instances creation to factory classes. 
 For example the constructor of `org.drools.core.reteoo.AlphaNode` is never called directly, we use `org.drools.core.reteoo.builder.PhreakNodeFactory`.
 
-At the same time Alpha Node had inside traits specific code that could be removed, such as in `calculateDeclaredMask` https://github.com/kiegroup/drools/pull/2887/files#diff-daf38b3d53b080cc1724b7d830e78c01L330
+At the same time Alpha Node had inside traits specific code that could be removed, such as in `calculateDeclaredMask` https://github.com/kubesmarts/drools/pull/2887/files#diff-daf38b3d53b080cc1724b7d830e78c01L330
 
-By providing a different implementation of the `org.drools.core.reteoo.builder.PhreakNodeFactory` => `org.drools.traits.core.reteoo.TraitPhreakNodeFactory` I could create instances of `org.drools.traits.core.reteoo.TraitAlphaNode` and move all the traits specific code there (https://github.com/kiegroup/drools/pull/2887/files#diff-2a6e70d7a533b488281fea5ccf5cfc39)
+By providing a different implementation of the `org.drools.core.reteoo.builder.PhreakNodeFactory` => `org.drools.traits.core.reteoo.TraitPhreakNodeFactory` I could create instances of `org.drools.traits.core.reteoo.TraitAlphaNode` and move all the traits specific code there (https://github.com/kubesmarts/drools/pull/2887/files#diff-2a6e70d7a533b488281fea5ccf5cfc39)
  
 The problem was that, even though we had factories, the mechanism to provide different implementation of such factories was removed some time ago in the code. 
 
@@ -104,30 +104,30 @@ When missing, it defaults to the creation of a `org.drools.core.reteoo.KieCompon
 NOTE: I know the whole idea of a `*FactoryFactory` is horripilating, but that's what you get when you put state in a factory, whose job should be only to create object. You get a higher-order factory. 
 I'm open to suggestion for better names, such as `*FactoryBuilder` to avoid being mocked exploiting Java programmers stereotypes.
 
-The `TraitKieComponentFactory` created by the `TraitKieComponentFactoryFactory` stores everything needed by the traits specific code, such as https://github.com/kiegroup/drools/pull/2887/files#diff-7accbb25640ec3a967ccbe5079e0306eR46
+The `TraitKieComponentFactory` created by the `TraitKieComponentFactoryFactory` stores everything needed by the traits specific code, such as https://github.com/kubesmarts/drools/pull/2887/files#diff-7accbb25640ec3a967ccbe5079e0306eR46
 
 Other example of subclassed objects:
 
-`org.drools.core.common.NamedEntryPoint` => `org.drools.traits.core.common.TraitNamedEntryPoint`  https://github.com/kiegroup/drools/pull/2887/files#diff-7290855911f5856e5432eb94c66e5ac8R404
-`org.drools.core.common.DefaultFactHandle` => `org.drools.traits.core.common.TraitDefaultFactHandle` https://github.com/kiegroup/drools/pull/2887/files#diff-0dc5e56c09ea3b314b741c39d78177baR214
+`org.drools.core.common.NamedEntryPoint` => `org.drools.traits.core.common.TraitNamedEntryPoint`  https://github.com/kubesmarts/drools/pull/2887/files#diff-7290855911f5856e5432eb94c66e5ac8R404
+`org.drools.core.common.DefaultFactHandle` => `org.drools.traits.core.common.TraitDefaultFactHandle` https://github.com/kubesmarts/drools/pull/2887/files#diff-0dc5e56c09ea3b314b741c39d78177baR214
 
 When factory classes were missing (such as in NamedEntryPoint) they were created
-https://github.com/kiegroup/drools/pull/2887/files#diff-396566b11c71c507cb114bf327022c95R10
+https://github.com/kubesmarts/drools/pull/2887/files#diff-396566b11c71c507cb114bf327022c95R10
 
 IsA EvaluatorDefinition
 =======================
 
 The isA operator used in traits was removed from the default evaluators and moved to the traits module
-https://github.com/kiegroup/drools/pull/2887/files#diff-add6d202fbcf44eade6dcbb67a273815
+https://github.com/kubesmarts/drools/pull/2887/files#diff-add6d202fbcf44eade6dcbb67a273815
 
 When needed, it has to be defined explicitly such as in 
-https://github.com/kiegroup/drools/pull/2887/files#diff-a5a9d687ff07d8c0de153da39d6ba177R36
+https://github.com/kubesmarts/drools/pull/2887/files#diff-a5a9d687ff07d8c0de153da39d6ba177R36
 
 Static helper Methods
 =====================
 
 Some static helper methods were moved in isolated classes such as `static boolean supersetOrEqualset(BitSet n1, BitSet n2 )`
-https://github.com/kiegroup/drools/pull/2887/files#diff-c023ae27b398cf56a54054cced5b933dR7
+https://github.com/kubesmarts/drools/pull/2887/files#diff-c023ae27b398cf56a54054cced5b933dR7
 
 Tests
 =======

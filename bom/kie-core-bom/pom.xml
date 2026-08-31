@@ -37,7 +37,7 @@
     Import this BOM in your dependencyManagement if you want to depend on multiple KIE artifacts.
   </description>
 
-  <url>http://www.kiegroup.org</url>
+  <url>http://www.kubesmarts.org</url>
   <inceptionYear>2001</inceptionYear>
   <organization>
     <name>The Apache Software Foundation</name>

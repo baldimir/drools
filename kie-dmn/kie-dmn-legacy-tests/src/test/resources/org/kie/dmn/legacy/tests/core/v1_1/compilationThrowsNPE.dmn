@@ -23,7 +23,7 @@
              xmlns:feel="http://www.omg.org/spec/FEEL/20140401"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              id="compilation-throws-npe"
-             namespace="https://github.com/kiegroup/kie-dmn"
+             namespace="https://github.com/kubesmarts/kie-dmn"
              name="compilation-throws-npe"
              xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
              expressionLanguage="http://www.omg.org/spec/FEEL/20140401"

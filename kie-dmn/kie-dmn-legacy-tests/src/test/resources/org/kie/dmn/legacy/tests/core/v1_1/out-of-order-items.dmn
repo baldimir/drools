@@ -22,9 +22,9 @@
 
 
 <definitions id="_out-of-order" name="out-of-order"
-	namespace="https://github.com/kiegroup/kie-dmn"
+	namespace="https://github.com/kubesmarts/kie-dmn"
 	xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
-	xmlns:kie="https://github.com/kiegroup/kie-dmn"
+	xmlns:kie="https://github.com/kubesmarts/kie-dmn"
 	xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
 	<itemDefinition name="tPassenger">
 		<itemComponent name="Status">

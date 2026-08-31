@@ -76,7 +76,7 @@ public class DMNRuntimeListenerDSTest {
 
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("helloDS.dmn", this.getClass());
         runtime.addListener(listenerUT);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_4D937A56-2648-4AA8-A252-EBD405CFC6A8", "helloDS");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_4D937A56-2648-4AA8-A252-EBD405CFC6A8", "helloDS");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -110,7 +110,7 @@ public class DMNRuntimeListenerDSTest {
 
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("helloDS.dmn", this.getClass());
         runtime.addListener(listenerUT);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_4D937A56-2648-4AA8-A252-EBD405CFC6A8", "helloDS");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_4D937A56-2648-4AA8-A252-EBD405CFC6A8", "helloDS");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

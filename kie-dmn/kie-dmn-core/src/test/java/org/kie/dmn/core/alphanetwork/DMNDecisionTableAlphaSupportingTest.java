@@ -62,7 +62,7 @@ public class DMNDecisionTableAlphaSupportingTest extends BaseInterpretedVsAlphaN
     void simpleTableMultipleTests(boolean useAlphaNetwork) {
         alphaNetwork = useAlphaNetwork;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("an-simpletable-multipletests.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "an-simpletable-multipletests");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "an-simpletable-multipletests");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();

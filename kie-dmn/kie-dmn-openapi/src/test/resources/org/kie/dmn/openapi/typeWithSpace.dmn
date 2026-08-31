@@ -47,7 +47,7 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape xmlns:p0="https://kiegroup.org/dmn/_E01D9061-CE77-4763-B52A-6F2C7BA9DD03" id="dmnshape-_29A10DF8-F1EB-4B13-B5E0-EA17D298DC9B" dmnElementRef="p0:_29A10DF8-F1EB-4B13-B5E0-EA17D298DC9B" isCollapsed="false">
+      <dmndi:DMNShape xmlns:p0="https://kubesmarts.org/dmn/_E01D9061-CE77-4763-B52A-6F2C7BA9DD03" id="dmnshape-_29A10DF8-F1EB-4B13-B5E0-EA17D298DC9B" dmnElementRef="p0:_29A10DF8-F1EB-4B13-B5E0-EA17D298DC9B" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
@@ -56,7 +56,7 @@
         <dc:Bounds x="215" y="128" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape xmlns:p1="https://kiegroup.org/dmn/_E01D9061-CE77-4763-B52A-6F2C7BA9DD03" id="dmnshape-_99761846-CE01-4B87-A5A6-86F99FA8B3EA" dmnElementRef="p1:_99761846-CE01-4B87-A5A6-86F99FA8B3EA" isCollapsed="false">
+      <dmndi:DMNShape xmlns:p1="https://kubesmarts.org/dmn/_E01D9061-CE77-4763-B52A-6F2C7BA9DD03" id="dmnshape-_99761846-CE01-4B87-A5A6-86F99FA8B3EA" dmnElementRef="p1:_99761846-CE01-4B87-A5A6-86F99FA8B3EA" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
@@ -65,7 +65,7 @@
         <dc:Bounds x="395" y="128" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNEdge xmlns:p2="https://kiegroup.org/dmn/_E01D9061-CE77-4763-B52A-6F2C7BA9DD03" id="dmnedge-_AED8086A-83B8-48B4-9479-4D21A5C0C4D9" dmnElementRef="p2:_AED8086A-83B8-48B4-9479-4D21A5C0C4D9">
+      <dmndi:DMNEdge xmlns:p2="https://kubesmarts.org/dmn/_E01D9061-CE77-4763-B52A-6F2C7BA9DD03" id="dmnedge-_AED8086A-83B8-48B4-9479-4D21A5C0C4D9" dmnElementRef="p2:_AED8086A-83B8-48B4-9479-4D21A5C0C4D9">
         <di:waypoint x="315" y="153"/>
         <di:waypoint x="395" y="153"/>
       </dmndi:DMNEdge>

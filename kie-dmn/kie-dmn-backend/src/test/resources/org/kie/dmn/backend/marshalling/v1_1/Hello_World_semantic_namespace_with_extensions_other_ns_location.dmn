@@ -32,7 +32,7 @@
 					  namespace="http://www.trisotech.com/definitions/_f2695525-ffe9-4c96-a9ec-15c18e555f68"
 					  triso:logoChoice="Default">
   <semantic:extensionElements>
-    <kie:mykieext xmlns:kie="https://github.com/kiegroup/drools" a1="value_a1">
+    <kie:mykieext xmlns:kie="https://github.com/kubesmarts/drools" a1="value_a1">
       <drools:mydroolsext xmlns:drools="http://drools.org" b1="value_b1">Hello Extensions</drools:mydroolsext>
     </kie:mykieext> 
   </semantic:extensionElements>

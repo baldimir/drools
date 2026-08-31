@@ -45,7 +45,7 @@ public class DMNRecursionTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("basicRecursion.dmn", this.getClass());
         runtime.addListener(new DMNRuntimeEventListener(){});
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_16EF6BF4-9B59-40E8-8C99-A3A3D58B88CC", "factorial");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_16EF6BF4-9B59-40E8-8C99-A3A3D58B88CC", "factorial");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

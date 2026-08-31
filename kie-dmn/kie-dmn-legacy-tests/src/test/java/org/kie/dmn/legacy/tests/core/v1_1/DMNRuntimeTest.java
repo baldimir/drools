@@ -104,7 +104,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
     void simpleItemDefinition(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn/itemdef", "simple-item-def");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn/itemdef", "simple-item-def");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -124,7 +124,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
     void compositeItemDefinition(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0008-LX-arithmetic.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0008-LX-arithmetic");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0008-LX-arithmetic");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -422,7 +422,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
     void notificationsApproved2(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("NotificationsTest2.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "building-structure-rules");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "building-structure-rules");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -559,7 +559,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("list-expression.dmn", getClass());
 //        runtime.addListener( DMNRuntimeUtil.createListener() );
 
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "list-expression");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "list-expression");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -576,7 +576,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("relation-expression.dmn", getClass());
 //        runtime.addListener( DMNRuntimeUtil.createListener() );
 
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "relation-expression");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "relation-expression");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -760,7 +760,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
     void alternativeNSDecl(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("alternative_feel_ns_declaration.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0001-input-data-string");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0001-input-data-string");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -853,7 +853,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
     void testNull(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("null_values.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "Null values model");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "Null values model");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -1001,7 +1001,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("DTABLE_NON_PRIORITY_MISSING_OUTVALS.dmn", this.getClass());
         final DMNModel dmnModel = runtime.getModel(
-                "https://github.com/kiegroup/kie-dmn",
+                "https://github.com/kubesmarts/kie-dmn",
                 "DTABLE_NON_PRIORITY_MISSING_OUTVALS");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -1013,7 +1013,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("DTABLE_PRIORITY_ONE_OUTVAL.dmn", this.getClass());
         final DMNModel dmnModel = runtime.getModel(
-                "https://github.com/kiegroup/kie-dmn",
+                "https://github.com/kubesmarts/kie-dmn",
                 "DTABLE_PRIORITY_ONE_OUTVAL");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -1088,7 +1088,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("out-of-order-items.dmn", this.getClass());
         final DMNModel dmnModel = runtime.getModel(
-                "https://github.com/kiegroup/kie-dmn",
+                "https://github.com/kubesmarts/kie-dmn",
                 "out-of-order");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.getMessages().stream().anyMatch(m -> m.getMessageType().equals(DMNMessageType.FAILED_VALIDATOR)))
@@ -1476,7 +1476,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
     void artificialAttributes(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string-artificial-attributes.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools", "0001-input-data-string");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools", "0001-input-data-string");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -2265,7 +2265,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
     void modelById(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModelById("https://github.com/kiegroup/kie-dmn/itemdef", "_simple-item-def");
+        final DMNModel dmnModel = runtime.getModelById("https://github.com/kubesmarts/kie-dmn/itemdef", "_simple-item-def");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -2543,7 +2543,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
         testConfig = conf;
         assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
             final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-            final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn/itemdef", "simple-item" +
+            final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn/itemdef", "simple-item" +
                     "-def");
             assertThat(dmnModel).isNotNull();
             assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -2562,7 +2562,7 @@ public class DMNRuntimeTest extends BaseDMN1_1VariantTest {
         testConfig = conf;
         assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
             final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-            final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn/itemdef", "simple-item" +
+            final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn/itemdef", "simple-item" +
                     "-def");
             assertThat(dmnModel).isNotNull();
             assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();

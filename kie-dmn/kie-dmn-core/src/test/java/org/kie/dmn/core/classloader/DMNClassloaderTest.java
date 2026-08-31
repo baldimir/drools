@@ -158,7 +158,7 @@ public class DMNClassloaderTest extends BaseInterpretedVsCompiledTest {
 
         final KieContainer container = ks.newKieContainer(kjarReleaseId);
         final DMNRuntime runtime = container.newKieSession().getKieRuntime(DMNRuntime.class);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_8B620EB6-9E5E-4095-B990-19827F316887", "invokeJavaReturnArrayPrimitives");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_8B620EB6-9E5E-4095-B990-19827F316887", "invokeJavaReturnArrayPrimitives");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

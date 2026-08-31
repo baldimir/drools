@@ -71,7 +71,7 @@ class DMNImportsUtilTest {
     private static final String dmnPmmlModelName = "TestRegressionDMN";
     private static final String dmnPmmlFileName = "KiePMMLRegression";
 
-    private static final String dmnPmmlNameSpace =  "https://kiegroup.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456";
+    private static final String dmnPmmlNameSpace =  "https://kubesmarts.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456";
     private static final String dmnPmmlFullFileName = String.format("%s.dmn", dmnPmmlFileName);
     private static final String dmnPmmlFullPathFileName = String.format("valid_models/DMNv1_x/pmml/%s", dmnPmmlFullFileName);
 

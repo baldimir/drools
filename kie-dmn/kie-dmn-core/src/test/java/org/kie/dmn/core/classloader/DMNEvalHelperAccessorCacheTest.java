@@ -118,7 +118,7 @@ public class DMNEvalHelperAccessorCacheTest extends BaseInterpretedVsCompiledTes
 
     private void checkKieContainer1(KieContainer container) throws Exception {
         final DMNRuntime runtime = KieRuntimeFactory.of(container.getKieBase()).get(DMNRuntime.class);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61", "personCL");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61", "personCL");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

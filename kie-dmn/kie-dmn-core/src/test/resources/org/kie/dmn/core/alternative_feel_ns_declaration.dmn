@@ -19,7 +19,7 @@
   -->
 
 <definitions id="0001-input-data-string" name="0001-input-data-string"
-	namespace="https://github.com/kiegroup/kie-dmn"
+	namespace="https://github.com/kubesmarts/kie-dmn"
 	xmlns="https://www.omg.org/spec/DMN/20240513/MODEL/">
 	<decision name="Greeting Message" id="d_GreetingMessage">
 		<variable xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/" name="Greeting Message" typeRef="feel.string"/>

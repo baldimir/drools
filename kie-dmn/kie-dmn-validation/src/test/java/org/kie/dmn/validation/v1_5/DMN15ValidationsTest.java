@@ -114,7 +114,7 @@ public class DMN15ValidationsTest {
     void dateToDateTimeFunctionValidation() {
         String modelFileName = "valid_models/DMNv1_5/DateToDateTimeFunction.dmn";
         String modelName = "new-file";
-        String modelNamespace = "https://kiegroup.org/dmn/_A7F17D7B-F0AB-4C0B-B521-02EA26C2FBEE";
+        String modelNamespace = "https://kubesmarts.org/dmn/_A7F17D7B-F0AB-4C0B-B521-02EA26C2FBEE";
         validate(modelFileName);
         evaluate(modelNamespace, modelName, modelFileName, Collections.EMPTY_MAP);
     }

@@ -49,7 +49,7 @@ public class DMNTyperefTest extends BaseInterpretedVsCompiledTest {
     void circular3(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("circular3.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_EEE7FA5B-AF9C-4937-8870-D612D4D8D860", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_EEE7FA5B-AF9C-4937-8870-D612D4D8D860", "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -69,7 +69,7 @@ public class DMNTyperefTest extends BaseInterpretedVsCompiledTest {
     void genFn1(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("wireGenFnType1.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "wireGenFnType1");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "wireGenFnType1");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -126,7 +126,7 @@ public class DMNTyperefTest extends BaseInterpretedVsCompiledTest {
     void genFn2(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("wireGenFnType2.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "wireGenFnType2");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "wireGenFnType2");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -147,7 +147,7 @@ public class DMNTyperefTest extends BaseInterpretedVsCompiledTest {
     void ds_wrong_fn_type(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("dsWrongFnType.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "dsWrongFnType");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "dsWrongFnType");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -218,7 +218,7 @@ public class DMNTyperefTest extends BaseInterpretedVsCompiledTest {
     void genFn3(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("wireGenFnType3.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "wireGenFnType3");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_10795E58-CD3F-4203-B4D7-C80D9D8BE7BD", "wireGenFnType3");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

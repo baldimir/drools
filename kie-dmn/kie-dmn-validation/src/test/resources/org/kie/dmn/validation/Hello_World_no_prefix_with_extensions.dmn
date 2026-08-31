@@ -24,7 +24,7 @@
                       xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
                       xmlns:drools="http://drools.org"
                       xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/"
-                      xmlns:kie="https://github.com/kiegroup/drools"
+                      xmlns:kie="https://github.com/kubesmarts/drools"
                       xmlns:semantic="https://www.omg.org/spec/DMN/20240513/MODEL/"
                       xmlns:thismodel="http://www.trisotech.com/definitions/_f2695525-ffe9-4c96-a9ec-15c18e555f68"
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

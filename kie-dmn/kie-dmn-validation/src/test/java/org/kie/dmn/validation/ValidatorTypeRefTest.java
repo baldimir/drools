@@ -56,7 +56,7 @@ class ValidatorTypeRefTest extends AbstractValidatorTest {
     @Test
     void typeref_no_feel_type_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
-                getDefinitions("typeref/TYPEREF_NO_FEEL_TYPE.dmn", "https://github.com/kiegroup/kie-dmn", "TYPEREF_NO_FEEL_TYPE"),
+                getDefinitions("typeref/TYPEREF_NO_FEEL_TYPE.dmn", "https://github.com/kubesmarts/kie-dmn", "TYPEREF_NO_FEEL_TYPE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
         assertThat(validate.stream().anyMatch(p -> p.getMessageType().equals(DMNMessageType.TYPE_DEF_NOT_FOUND))).isTrue();
@@ -85,7 +85,7 @@ class ValidatorTypeRefTest extends AbstractValidatorTest {
     @Test
     void typeref_no_ns_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
-                getDefinitions("typeref/TYPEREF_NO_NS.dmn", "https://github.com/kiegroup/kie-dmn", "TYPEREF_NO_NS"),
+                getDefinitions("typeref/TYPEREF_NO_NS.dmn", "https://github.com/kubesmarts/kie-dmn", "TYPEREF_NO_NS"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
         assertThat(validate.stream().anyMatch(p -> p.getMessageType().equals(DMNMessageType.TYPE_DEF_NOT_FOUND))).isTrue();
@@ -116,7 +116,7 @@ class ValidatorTypeRefTest extends AbstractValidatorTest {
     @Test
     void typeref_not_feel_not_def_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
-                getDefinitions("typeref/TYPEREF_NOT_FEEL_NOT_DEF.dmn", "https://github.com/kiegroup/kie-dmn", "TYPEREF_NOT_FEEL_NOT_DEF"),
+                getDefinitions("typeref/TYPEREF_NOT_FEEL_NOT_DEF.dmn", "https://github.com/kubesmarts/kie-dmn", "TYPEREF_NOT_FEEL_NOT_DEF"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(3);
         assertThat(validate.stream().anyMatch(p -> p.getMessageType().equals(DMNMessageType.INVALID_NAME))).isTrue();
@@ -153,7 +153,7 @@ class ValidatorTypeRefTest extends AbstractValidatorTest {
         // the assumption is that the following document TYPEREF_NOT_FEEL_NOT_DEF_valid.dmn should NOT contain any DMNMessageTypeId.TYPEREF_NOT_FEEL_NOT_DEF at all
         // the test also highlight typically in a DMN model many nodes would not define a typeRef, resulting in a large number of false negative
         final List<DMNMessage> validate = validator.validate(
-                getDefinitions("typeref/TYPEREF_NOT_FEEL_NOT_DEF_valid.dmn", "https://github.com/kiegroup/kie-dmn", "TYPEREF_NOT_FEEL_NOT_DEF_valid"),
+                getDefinitions("typeref/TYPEREF_NOT_FEEL_NOT_DEF_valid.dmn", "https://github.com/kubesmarts/kie-dmn", "TYPEREF_NOT_FEEL_NOT_DEF_valid"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(0);
     }

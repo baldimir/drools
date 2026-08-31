@@ -282,7 +282,7 @@ class ScenarioSimulationXMLPersistenceTest {
         commonVerifySingleNodeSingleChild(retrieved, "DMN");
         
         retrieved = getNestedChildrenNodesMap(document, SCENARIO_SIMULATION_MODEL_NODE, SETTINGS_NODE, "dmnNamespace");
-        commonVerifySingleNodeSingleChild(retrieved, "https://github.com/kiegroup/drools/kie-dmn/_CC8924B0-D729-4D70-9588-039B5824FFE9");
+        commonVerifySingleNodeSingleChild(retrieved, "https://github.com/kubesmarts/drools/kie-dmn/_CC8924B0-D729-4D70-9588-039B5824FFE9");
         
         retrieved = getNestedChildrenNodesMap(document, SCENARIO_SIMULATION_MODEL_NODE, SETTINGS_NODE, "dmnName");
         commonVerifySingleNodeSingleChild(retrieved, "a1Collection");

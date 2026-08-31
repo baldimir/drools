@@ -48,7 +48,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void inputStringEvaluateAll(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0001-input-data-string.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/drools/kie-dmn", "_0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/drools/kie-dmn", "_0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -69,7 +69,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void inputStringEvaluateDecisionByName(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0001-input-data-string.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/drools/kie-dmn", "_0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/drools/kie-dmn", "_0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -102,7 +102,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void inputStringEvaluateDecisionById(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0001-input-data-string.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/drools/kie-dmn", "_0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/drools/kie-dmn", "_0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -135,7 +135,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void inputStringAllowedValuesEvaluateAll(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0003-input-data-string-allowed-values.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "0003-input-data-string-allowed-values" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "0003-input-data-string-allowed-values" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -164,7 +164,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
 
     private void testInputStringNotAllowedValuesEvaluateAll(final Object inputValue) {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0003-input-data-string-allowed-values.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "0003-input-data-string-allowed-values" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "0003-input-data-string-allowed-values" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -185,7 +185,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void inputNumberEvaluateAll(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0002-input-data-number.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "0002-input-data-number" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "0002-input-data-number" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -203,7 +203,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void getRequiredInputsByName(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0001-input-data-string.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/drools/kie-dmn", "_0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/drools/kie-dmn", "_0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
 
         Set<InputDataNode> inputs = dmnModel.getRequiredInputsForDecisionName( "Greeting Message" );
@@ -220,7 +220,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void getRequiredInputsById(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0001-input-data-string.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/drools/kie-dmn", "_0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/drools/kie-dmn", "_0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
 
         Set<InputDataNode> inputs = dmnModel.getRequiredInputsForDecisionId( "d_GreetingMessage" );
@@ -237,7 +237,7 @@ public class DMNInputRuntimeTest extends BaseDMN1_1VariantTest {
     void nonexistantInputNodeName(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0001-input-data-string.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/drools/kie-dmn", "_0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/drools/kie-dmn", "_0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();

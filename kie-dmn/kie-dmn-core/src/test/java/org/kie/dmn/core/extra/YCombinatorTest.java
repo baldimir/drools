@@ -42,7 +42,7 @@ public class YCombinatorTest extends BaseInterpretedVsCompiledTest {
     void y(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("Y.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_2E160C58-B13A-4C35-B161-BB4B31E049B4",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_2E160C58-B13A-4C35-B161-BB4B31E049B4",
                                                    "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -65,7 +65,7 @@ public class YCombinatorTest extends BaseInterpretedVsCompiledTest {
     void yboxed(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("Yboxed.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_2E160C58-B13A-4C35-B161-BB4B31E049B4",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_2E160C58-B13A-4C35-B161-BB4B31E049B4",
                                                    "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();

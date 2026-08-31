@@ -50,7 +50,7 @@ public class TrafficViolationTest {
         KieContainer kieContainer = kieServices.getKieClasspathContainer();
         dmnRuntime = KieRuntimeFactory.of(kieContainer.getKieBase()).get(DMNRuntime.class);
 
-        final String namespace = "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF";
+        final String namespace = "https://github.com/kubesmarts/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF";
         final String modelName = "Traffic Violation";
         dmnModelUT = dmnRuntime.getModel(namespace, modelName);
     }

@@ -98,7 +98,7 @@ public class DynamicDMNContextBuilderTest {
     @Test
     void nextDays() throws Exception {
         final DMNRuntime runtime = createRuntime("nextDays.dmn", DMNRuntimeTypesTest.class);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_8A1F9719-02AA-4517-97D4-5C4F5D22FE82", "nextDays");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_8A1F9719-02AA-4517-97D4-5C4F5D22FE82", "nextDays");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -117,7 +117,7 @@ public class DynamicDMNContextBuilderTest {
     @Test
     void trafficViolationAll() throws Exception {
         final DMNRuntime runtime = createRuntimeWithAdditionalResources("Traffic Violation.dmn", DMNRuntimeTypesTest.class);
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -147,7 +147,7 @@ public class DynamicDMNContextBuilderTest {
     @Test
     void trafficViolationMin() throws Exception {
         final DMNRuntime runtime = createRuntimeWithAdditionalResources("Traffic Violation.dmn", DMNRuntimeTypesTest.class);
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -171,7 +171,7 @@ public class DynamicDMNContextBuilderTest {
     @Test
     void trafficViolationArbitraryFine() throws Exception {
         final DMNRuntime runtime = createRuntimeWithAdditionalResources("Traffic Violation.dmn", DMNRuntimeTypesTest.class);
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -242,7 +242,7 @@ public class DynamicDMNContextBuilderTest {
     @Test
     void floatFromREST() throws Exception {
         final DMNRuntime runtime = createRuntime("numberRESTinLIST.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_91CAD4BC-859F-465A-9294-300EABF4EC8A", "numberRESTinLIST");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_91CAD4BC-859F-465A-9294-300EABF4EC8A", "numberRESTinLIST");
         Assertions.assertThat(dmnModel).isNotNull();
         Assertions.assertThat(dmnModel.hasErrors()).describedAs(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

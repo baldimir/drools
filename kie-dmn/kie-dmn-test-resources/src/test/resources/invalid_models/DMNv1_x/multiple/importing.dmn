@@ -17,9 +17,9 @@
   under the License.
   -->
 
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_E9B3EC65-CD6A-4E26-9DF5-AD31D94FB1A6" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:included1="https://kiegroup.org/dmn/_6A8FBF20-4F01-4097-A2BB-A28495F90E03" id="_465F662E-8DB5-4FD9-A848-E813CB730A91" name="importing" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_E9B3EC65-CD6A-4E26-9DF5-AD31D94FB1A6">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kubesmarts.org/dmn/_E9B3EC65-CD6A-4E26-9DF5-AD31D94FB1A6" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:included1="https://kubesmarts.org/dmn/_6A8FBF20-4F01-4097-A2BB-A28495F90E03" id="_465F662E-8DB5-4FD9-A848-E813CB730A91" name="importing" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kubesmarts.org/dmn/_E9B3EC65-CD6A-4E26-9DF5-AD31D94FB1A6">
   <dmn:extensionElements/>
-  <dmn:import id="_13F4D6D8-FC58-4234-88EB-D0A35824C733" name="import1" namespace="https://kiegroup.org/dmn/_6A8FBF20-4F01-4097-A2BB-A28495F90E03" locationURI="stdlib.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:import id="_13F4D6D8-FC58-4234-88EB-D0A35824C733" name="import1" namespace="https://kubesmarts.org/dmn/_6A8FBF20-4F01-4097-A2BB-A28495F90E03" locationURI="stdlib.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
   <dmn:inputData id="_A819FAD7-E389-44F3-A95C-5B4729EAFFB5" name="a person">
     <dmn:extensionElements/>
     <dmn:variable id="_97C6EE91-A9B8-4EA2-A1B8-7A2AA0C719C7" name="a person" typeRef="import1.tPerson"/>
@@ -31,7 +31,7 @@
       <dmn:requiredInput href="#_A819FAD7-E389-44F3-A95C-5B4729EAFFB5"/>
     </dmn:informationRequirement>
     <dmn:knowledgeRequirement id="_66E8D1A7-0A4E-48A9-A546-3B92DB5132FF">
-      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_6A8FBF20-4F01-4097-A2BB-A28495F90E03#_641B6A2D-4686-4BBB-A4E4-6AB2216FBF89"/>
+      <dmn:requiredKnowledge href="https://kubesmarts.org/dmn/_6A8FBF20-4F01-4097-A2BB-A28495F90E03#_641B6A2D-4686-4BBB-A4E4-6AB2216FBF89"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_246B6736-08A9-4058-B21C-9F7D080BE147">
       <dmn:text>import1.bkm1(a person) + " (age:" + string(a person.age) + ")."</dmn:text>

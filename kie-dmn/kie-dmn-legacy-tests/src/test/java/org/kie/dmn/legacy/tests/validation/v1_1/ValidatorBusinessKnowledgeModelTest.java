@@ -59,7 +59,7 @@ class ValidatorBusinessKnowledgeModelTest extends AbstractValidatorTest {
     void bkm_missing_var_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("businessknowledgemodel/BKM_MISSING_VAR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "BKM_MISSING_VAR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -90,7 +90,7 @@ class ValidatorBusinessKnowledgeModelTest extends AbstractValidatorTest {
     void bkm_mismatch_var_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("businessknowledgemodel/BKM_MISMATCH_VAR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "BKM_MISSING_VAR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -121,7 +121,7 @@ class ValidatorBusinessKnowledgeModelTest extends AbstractValidatorTest {
     void bkm_missing_expr_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("businessknowledgemodel/BKM_MISSING_EXPR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "BKM_MISSING_EXPR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);

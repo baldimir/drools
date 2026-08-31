@@ -41,7 +41,7 @@ class ProcessItemTest extends BaseDMNOASTest {
     }
 
     private void checkProcessItem(final DMNRuntime runtime, DMNOASResult result) throws IOException {
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_4B5AD433-0A08-4D69-A91F-89ECD6C2546F", "processItem");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_4B5AD433-0A08-4D69-A91F-89ECD6C2546F", "processItem");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 
@@ -59,7 +59,7 @@ class ProcessItemTest extends BaseDMNOASTest {
     }
 
     private void checkProcessItem_2(final DMNRuntime runtime, DMNOASResult result) throws IOException {
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_4B5AD433-0A08-4D69-A91F-89ECD6C2546F_2", "processItem_2");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_4B5AD433-0A08-4D69-A91F-89ECD6C2546F_2", "processItem_2");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 

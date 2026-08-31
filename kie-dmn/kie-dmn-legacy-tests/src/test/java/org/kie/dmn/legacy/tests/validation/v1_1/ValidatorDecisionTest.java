@@ -59,7 +59,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_missing_expr_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_MISSING_EXPR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_MISSING_EXPR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -90,7 +90,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_missing_var_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_MISSING_VAR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_MISSING_VAR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -118,7 +118,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_missing_vaRbisDefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_MISSING_VARbis.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_MISSING_VARbis"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -146,7 +146,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_mismatch_var_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_MISMATCH_VAR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_MISSING_VAR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -174,7 +174,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_multiple_expressions_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_MULTIPLE_EXPRESSIONS.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_MULTIPLE_EXPRESSIONS"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(0);
@@ -201,7 +201,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_perf_indicator_wrong_type_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_PERF_INDICATOR_WRONG_TYPE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_PERF_INDICATOR_WRONG_TYPE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -229,7 +229,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_decision_maker_wrong_type_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_DECISION_MAKER_WRONG_TYPE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_DECISION_MAKER_WRONG_TYPE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -257,7 +257,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_decision_owner_wrong_type_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_DECISION_OWNER_WRONG_TYPE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_DECISION_MAKER_WRONG_TYPE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -284,7 +284,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_cyclic_dependency_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_CYCLIC_DEPENDENCY.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_CYCLIC_DEPENDENCY"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION );
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -311,7 +311,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_cyclic_dependency_self_reference_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_CYCLIC_DEPENDENCY_SELF_REFERENCE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_CYCLIC_DEPENDENCY_SELF_REFERENCE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION );
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -336,7 +336,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_deadly_diamond_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_DEADLY_DIAMOND.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_DEADLY_DIAMOND"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION );
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(0);
@@ -360,7 +360,7 @@ class ValidatorDecisionTest extends AbstractValidatorTest {
     void decision_deadly_kite_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decision/DECISION_DEADLY_KITE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "DECISION_DEADLY_KITE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION );
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(0);

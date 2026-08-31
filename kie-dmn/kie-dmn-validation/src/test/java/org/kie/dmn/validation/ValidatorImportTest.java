@@ -181,7 +181,7 @@ public class ValidatorImportTest extends AbstractValidatorTest {
         assertThat(messages).as(ValidatorUtil.formatMessages(messages)).hasSize(0);
 
         DMNRuntime runtime = DMNRuntimeUtil.createRuntimeWithAdditionalResources("import/DROOLS-4187a.dmn", this.getClass(), "import/DROOLS-4187b.dmn");
-        DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_D0CFBAE7-4EBD-4FA5-A15F-DA00581ADA0B", "b");
+        DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_D0CFBAE7-4EBD-4FA5-A15F-DA00581ADA0B", "b");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

@@ -59,7 +59,7 @@ class ValidatorKnowledgeSourceTest extends AbstractValidatorTest {
     void know_source_missing_owner_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "knowledgesource/KNOW_SOURCE_MISSING_OWNER.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "KNOW_SOURCE_MISSING_OWNER"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -90,7 +90,7 @@ class ValidatorKnowledgeSourceTest extends AbstractValidatorTest {
     void know_source_owner_not_org_unit_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "knowledgesource/KNOW_SOURCE_OWNER_NOT_ORG_UNIT.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "KNOW_SOURCE_OWNER_NOT_ORG_UNIT"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);

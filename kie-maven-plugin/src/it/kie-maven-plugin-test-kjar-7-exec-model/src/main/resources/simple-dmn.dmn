@@ -17,7 +17,7 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   -->
-<semantic:definitions xmlns="https://github.com/kiegroup/kie-dmn"
+<semantic:definitions xmlns="https://github.com/kubesmarts/kie-dmn"
                       xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
                       xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
                       xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
@@ -25,7 +25,7 @@
                       xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/"
                       id="simple-dmn"
                       name="simple-dmn"
-                      namespace="https://github.com/kiegroup/kie-dmn">
+                      namespace="https://github.com/kubesmarts/kie-dmn">
    <semantic:decision name="Greeting Message" id="d_GreetingMessage">
       <semantic:variable name="Greeting Message" typeRef="string"/>
       <semantic:informationRequirement>

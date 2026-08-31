@@ -55,7 +55,7 @@ class ValidatorDMNElementReferenceTest extends AbstractValidatorTest {
     void elemref_nohash_DefinitionsInput() {
         final List<DMNMessage> validationMessages = validator.validate(
                 getDefinitions("dmnelementref/ELEMREF_NOHASH.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "ELEMREF_NOHASH"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertValiadationResult(validationMessages);

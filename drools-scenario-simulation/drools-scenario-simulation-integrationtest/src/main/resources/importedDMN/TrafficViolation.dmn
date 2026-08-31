@@ -17,9 +17,9 @@
   under the License.
   -->
 
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_F4681E8D-C4A7-4EEB-915D-3B23B5E0A547" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:included1="https://kiegroup.org/dmn/_5DA7054D-14B8-4D0B-85FF-2D713F771745" id="_1C792953-80DB-4B32-99EB-25FBE32BAF9E" name="Traffic Violation" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_F4681E8D-C4A7-4EEB-915D-3B23B5E0A547">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kubesmarts.org/dmn/_F4681E8D-C4A7-4EEB-915D-3B23B5E0A547" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:included1="https://kubesmarts.org/dmn/_5DA7054D-14B8-4D0B-85FF-2D713F771745" id="_1C792953-80DB-4B32-99EB-25FBE32BAF9E" name="Traffic Violation" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kubesmarts.org/dmn/_F4681E8D-C4A7-4EEB-915D-3B23B5E0A547">
   <dmn:extensionElements/>
-  <dmn:import id="_AD602BFD-B5BC-4F20-A50F-8BFF8867D6A8" name="general" namespace="https://kiegroup.org/dmn/_5DA7054D-14B8-4D0B-85FF-2D713F771745" locationURI="GeneralRules.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:import id="_AD602BFD-B5BC-4F20-A50F-8BFF8867D6A8" name="general" namespace="https://kubesmarts.org/dmn/_5DA7054D-14B8-4D0B-85FF-2D713F771745" locationURI="GeneralRules.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
   <dmn:itemDefinition id="_63824D3F-9173-446D-A940-6A7F0FA056BB" name="tDriver" isCollection="false">
     <dmn:itemComponent id="_9DAB5DAA-3B44-4F6D-87F2-95125FB2FEE4" name="Name" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
@@ -235,7 +235,7 @@
       <dmn:requiredDecision href="#_4055D956-1C47-479C-B3F4-BAEB61F1C929"/>
     </dmn:informationRequirement>
     <dmn:knowledgeRequirement id="_1DED50FF-6A2F-48EA-B69C-4EC247A9ACB0">
-      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_5DA7054D-14B8-4D0B-85FF-2D713F771745#_6C7F64A1-4EF3-483E-B1B3-03E9EFB8B856"/>
+      <dmn:requiredKnowledge href="https://kubesmarts.org/dmn/_5DA7054D-14B8-4D0B-85FF-2D713F771745#_6C7F64A1-4EF3-483E-B1B3-03E9EFB8B856"/>
     </dmn:knowledgeRequirement>
     <dmn:context id="_F39732F1-0AA7-468F-86C4-DCC07E6F81CF">
       <dmn:contextEntry>

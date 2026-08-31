@@ -34,7 +34,7 @@ class DiscouragedTypesTest extends BaseDMNOASTest {
         final DMNRuntime runtime = createRuntime("discouragedTypes.dmn", this.getClass());
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_7CFB36E1-8453-436E-A79F-FC16C27DB002", "discouragedTypes");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_7CFB36E1-8453-436E-A79F-FC16C27DB002", "discouragedTypes");
         ObjectNode syntheticJSONSchema = synthesizeSchema(result, modelUnderTest);
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 

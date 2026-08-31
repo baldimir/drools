@@ -45,7 +45,7 @@ public abstract class DMNNeuralNetworkPMMLTest {
                                                                       DMNKMeansModelPMMLTest.class,
                                                                       "test_nn.pmml");
 
-        dmnModel = runtime.getModel("https://kiegroup.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456",
+        dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456",
                                     "NeuralNetworkDMN");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).isFalse();

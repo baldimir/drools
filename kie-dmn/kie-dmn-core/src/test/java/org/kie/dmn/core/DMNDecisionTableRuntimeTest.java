@@ -164,7 +164,7 @@ public class DMNDecisionTableRuntimeTest extends BaseInterpretedVsCompiledTest {
     void simpleDecisionTableMultipleOutputWrongOutputType(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0004-simpletable-P-multiple-outputs-wrong-output.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "0004-simpletable-P-multiple-outputs-wrong-output" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "0004-simpletable-P-multiple-outputs-wrong-output" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -264,7 +264,7 @@ public class DMNDecisionTableRuntimeTest extends BaseInterpretedVsCompiledTest {
         final DMNRuntimeEventListener listener = Mockito.mock( DMNRuntimeEventListener.class );
         runtime.addListener( listener );
 
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "decisiontable-default-value" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "decisiontable-default-value" );
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -697,7 +697,7 @@ public class DMNDecisionTableRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         // DROOLS-5606 DMN wrong rule index in message when not conforming
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("DecisionTableOutputMessageRowIndex.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_D7A4B999-3178-4929-834F-8979E3C5000F", "DecisionTableOutputMessageRowIndex");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_D7A4B999-3178-4929-834F-8979E3C5000F", "DecisionTableOutputMessageRowIndex");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -718,7 +718,7 @@ public class DMNDecisionTableRuntimeTest extends BaseInterpretedVsCompiledTest {
     void dTand(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("DTand.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_6697FFDC-B3D9-4B0B-BC07-AE5E5AC96CB4", "DTand");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_6697FFDC-B3D9-4B0B-BC07-AE5E5AC96CB4", "DTand");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -735,7 +735,7 @@ public class DMNDecisionTableRuntimeTest extends BaseInterpretedVsCompiledTest {
     void qMarkAndNullShouldNotThrowNPEs(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("questionmarkunarytest/qmarkMatches.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_D1CF8332-8443-41C8-B214-D282B82C7632", "qmarkMatches");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_D1CF8332-8443-41C8-B214-D282B82C7632", "qmarkMatches");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -797,7 +797,7 @@ public class DMNDecisionTableRuntimeTest extends BaseInterpretedVsCompiledTest {
 
         final KieContainer container = ks.newKieContainer(kjarReleaseId);
         final DMNRuntime runtime = KieRuntimeFactory.of(container.getKieBase()).get(DMNRuntime.class);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_943A3581-5FD1-4BCF-9A52-AC7242CC451C", "multipleOutputsCollectDT");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_943A3581-5FD1-4BCF-9A52-AC7242CC451C", "multipleOutputsCollectDT");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

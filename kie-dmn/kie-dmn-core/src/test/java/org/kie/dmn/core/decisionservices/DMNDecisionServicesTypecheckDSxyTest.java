@@ -66,7 +66,7 @@ public class DMNDecisionServicesTypecheckDSxyTest {
     @BeforeEach()
     void init() {
         runtime = DMNRuntimeUtil.createRuntime("DSxy.dmn", this.getClass());
-        dmnModel = runtime.getModel("https://kiegroup.org/dmn/_127520A0-364A-4ADA-A012-3AB6A7E3585E", "DSxy");
+        dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_127520A0-364A-4ADA-A012-3AB6A7E3585E", "DSxy");
 
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();

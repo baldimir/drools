@@ -71,7 +71,7 @@ class ValidatorClassloaderTest extends AbstractValidatorTest {
 
         final KieContainer container = ks.newKieContainer(kjarReleaseId);
         final DMNRuntime runtime = KieRuntimeFactory.of(container.getKieBase()).get(DMNRuntime.class);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_69EA2E1A-F706-4CFB-8026-9E41397F6301", "DummyInvocation");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_69EA2E1A-F706-4CFB-8026-9E41397F6301", "DummyInvocation");
 
         DMNResult evaluateAll = runtime.evaluateAll(dmnModel, runtime.newContext());
         LOG.debug("{}", evaluateAll);

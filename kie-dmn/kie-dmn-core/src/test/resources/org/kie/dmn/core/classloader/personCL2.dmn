@@ -50,7 +50,7 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape xmlns:p0="https://kiegroup.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61" id="dmnshape-drg-_63E807D6-48EA-42D5-84EB-53F307646981" dmnElementRef="p0:_63E807D6-48EA-42D5-84EB-53F307646981" isCollapsed="false">
+      <dmndi:DMNShape xmlns:p0="https://kubesmarts.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61" id="dmnshape-drg-_63E807D6-48EA-42D5-84EB-53F307646981" dmnElementRef="p0:_63E807D6-48EA-42D5-84EB-53F307646981" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
@@ -59,7 +59,7 @@
         <dc:Bounds x="341" y="248" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape xmlns:p1="https://kiegroup.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61" id="dmnshape-drg-_E4FADBA4-9727-4971-AACB-FDD1C2D4469D" dmnElementRef="p1:_E4FADBA4-9727-4971-AACB-FDD1C2D4469D" isCollapsed="false">
+      <dmndi:DMNShape xmlns:p1="https://kubesmarts.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61" id="dmnshape-drg-_E4FADBA4-9727-4971-AACB-FDD1C2D4469D" dmnElementRef="p1:_E4FADBA4-9727-4971-AACB-FDD1C2D4469D" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
@@ -68,7 +68,7 @@
         <dc:Bounds x="518" y="248" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNEdge xmlns:p2="https://kiegroup.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61" id="dmnedge-drg-_0C8374B2-AAB2-42C0-ABC9-5E476FC38E54-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="p2:_0C8374B2-AAB2-42C0-ABC9-5E476FC38E54">
+      <dmndi:DMNEdge xmlns:p2="https://kubesmarts.org/dmn/_78BDCBE4-32EA-486E-9D81-CCC0D2378C61" id="dmnedge-drg-_0C8374B2-AAB2-42C0-ABC9-5E476FC38E54-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="p2:_0C8374B2-AAB2-42C0-ABC9-5E476FC38E54">
         <di:waypoint x="391" y="248"/>
         <di:waypoint x="568" y="298"/>
       </dmndi:DMNEdge>

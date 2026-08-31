@@ -75,7 +75,7 @@ public class DMNRuntimeListenerBKMTest {
 
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("sumWithBKM.dmn", this.getClass());
         runtime.addListener(listenerUT);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_FD426696-6811-494E-9938-10EE9C58DDEA", "sumWithBKM");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_FD426696-6811-494E-9938-10EE9C58DDEA", "sumWithBKM");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

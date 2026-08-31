@@ -118,7 +118,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void simpleItemDefinition(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn/itemdef", "simple-item-def");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn/itemdef", "simple-item-def");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -138,7 +138,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void compositeItemDefinition(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0008-LX-arithmetic.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0008-LX-arithmetic");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0008-LX-arithmetic");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -436,7 +436,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void notificationsApproved2(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("NotificationsTest2.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "building-structure-rules");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "building-structure-rules");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -673,7 +673,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void list(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("list-expression.dmn", getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "list-expression");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "list-expression");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(dmnModel.getMessages().toString()).isFalse();
 
@@ -688,7 +688,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void relation(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("relation-expression.dmn", getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "relation-expression");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "relation-expression");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(dmnModel.getMessages().toString()).isFalse();
 
@@ -819,7 +819,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void dateToDateTimeFunction(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("valid_models/DMNv1_5/DateToDateTimeFunction.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_A7F17D7B-F0AB-4C0B-B521-02EA26C2FBEE",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_A7F17D7B-F0AB-4C0B-B521-02EA26C2FBEE",
                 "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -929,7 +929,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void alternativeNSDecl(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("alternative_feel_ns_declaration.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0001-input-data-string");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0001-input-data-string");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -1022,7 +1022,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void testNull(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("null_values.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "Null values model");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "Null values model");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -1190,7 +1190,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("DTABLE_NON_PRIORITY_MISSING_OUTVALS.dmn", this.getClass());
         final DMNModel dmnModel = runtime.getModel(
-                "https://github.com/kiegroup/kie-dmn",
+                "https://github.com/kubesmarts/kie-dmn",
                 "DTABLE_NON_PRIORITY_MISSING_OUTVALS");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -1202,7 +1202,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("DTABLE_PRIORITY_ONE_OUTVAL.dmn", this.getClass());
         final DMNModel dmnModel = runtime.getModel(
-                "https://github.com/kiegroup/kie-dmn",
+                "https://github.com/kubesmarts/kie-dmn",
                 "DTABLE_PRIORITY_ONE_OUTVAL");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -1277,7 +1277,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("out-of-order-items.dmn", this.getClass());
         final DMNModel dmnModel = runtime.getModel(
-                "https://github.com/kiegroup/kie-dmn",
+                "https://github.com/kubesmarts/kie-dmn",
                 "out-of-order");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.getMessages().stream().anyMatch(m -> m.getMessageType().equals(DMNMessageType.FAILED_VALIDATOR)))
@@ -1540,7 +1540,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void nestingFnDef(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("nestingFnDef.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_FC72DC4B-DC64-4E43-9685-945FC3B7E4BC",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_FC72DC4B-DC64-4E43-9685-945FC3B7E4BC",
                 "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -1558,7 +1558,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void bkmCurried(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("bkmCurried.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_A7F17D7B-F0AB-4C0B-B521-02EA26C2FB7D",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_A7F17D7B-F0AB-4C0B-B521-02EA26C2FB7D",
                 "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -1577,7 +1577,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void bkmWithDotsInName(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("bkmWithDotsInName.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_E035C5C5-3571-453D-BD8F-FFF30E74A7F8",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_E035C5C5-3571-453D-BD8F-FFF30E74A7F8",
                 "bkmWithDotsInName");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -1751,7 +1751,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void artificialAttributes(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string-artificial-attributes.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools", "0001-input-data-string");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools", "0001-input-data-string");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -2271,7 +2271,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         // DROOLS-3670 DMN `between` FEEL operator alignments
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("is office open.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_19170B18-B561-4EB2-9D38-714E2442710E",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_19170B18-B561-4EB2-9D38-714E2442710E",
                 "is office open");
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -2417,7 +2417,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void structureContainment(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("structure-containtment.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_7FB5C3E4-4DF8-42A6-A7FA-28315DECCDD0",
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_7FB5C3E4-4DF8-42A6-A7FA-28315DECCDD0",
                 "structure-containtment");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -2582,7 +2582,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void modelById(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModelById("https://github.com/kiegroup/kie-dmn/itemdef", "_simple-item-def");
+        final DMNModel dmnModel = runtime.getModelById("https://github.com/kubesmarts/kie-dmn/itemdef", "_simple-item-def");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -2854,7 +2854,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         // DROOLS-3279 DMN DRGElement typeRef to allow FEEL Any
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("any-expression.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_D8154592-7406-4E5A-B7F7-347984A92288", "_40F20B8D-84C1-4AC2-B28C-267892C15077");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_D8154592-7406-4E5A-B7F7-347984A92288", "_40F20B8D-84C1-4AC2-B28C-267892C15077");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3283,7 +3283,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
             final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-            final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn/itemdef", "simple-item-def");
+            final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn/itemdef", "simple-item-def");
             assertThat(dmnModel).isNotNull();
             assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3301,7 +3301,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         init(useExecModelCompiler);
         assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> {
             final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("simple-item-def.dmn", this.getClass());
-            final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn/itemdef", "simple-item-def");
+            final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn/itemdef", "simple-item-def");
             assertThat(dmnModel).isNotNull();
             assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3363,7 +3363,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void instanceOfItemDefBasic(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("instanceOfItemDefBasic.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_CF9357D4-C83F-4F7E-83E3-510310EB16F4", "testItemDefName");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_CF9357D4-C83F-4F7E-83E3-510310EB16F4", "testItemDefName");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3406,7 +3406,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("errorWhileLiteral.dmn", this.getClass());
         runtime.addListener(new DMNRuntimeEventListener() {
         });
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_8DF63435-B34B-4C19-A06B-C6A3416194A9", "testBasic");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_8DF63435-B34B-4C19-A06B-C6A3416194A9", "testBasic");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3423,7 +3423,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void xAsType(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("xAsType.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_CA816D47-2D7A-41AA-B019-E4B4C5488385", "FEC85B35-BAC9-4FCC-A446-0D546CCAD1A4");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_CA816D47-2D7A-41AA-B019-E4B4C5488385", "FEC85B35-BAC9-4FCC-A446-0D546CCAD1A4");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3459,7 +3459,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void personInReq1(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("personInReq1.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_EA9DA906-5A01-4AAA-B341-792486A67097", "personInReq1");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_EA9DA906-5A01-4AAA-B341-792486A67097", "personInReq1");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3480,7 +3480,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void arthimeticSub1(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("arithmeticSub1.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_7B82BF58-74D1-4727-820F-9925FA3F7812", "arithmeticSub1");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_7B82BF58-74D1-4727-820F-9925FA3F7812", "arithmeticSub1");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3499,7 +3499,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void arthimeticSub2(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("arithmeticSub2.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_FCE6849C-6535-4629-A132-8DFD292A4765", "arithmeticSub2");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_FCE6849C-6535-4629-A132-8DFD292A4765", "arithmeticSub2");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3515,7 +3515,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void invokeJavaReturnArray(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("invokeJavaReturnArray.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_C90046D5-8581-4B16-992D-0472F840EFAF", "invokeJavaReturnArray");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_C90046D5-8581-4B16-992D-0472F840EFAF", "invokeJavaReturnArray");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3535,7 +3535,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("notInvocable.dmn", this.getClass());
         runtime.addListener(new DMNRuntimeEventListener() {
         });
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_4B70E98C-E74E-48A1-88C6-F3FB1F0C026B", "notInvocable");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_4B70E98C-E74E-48A1-88C6-F3FB1F0C026B", "notInvocable");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3575,7 +3575,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("dupContextEntryKey.dmn", this.getClass());
         runtime.addListener(new DMNRuntimeEventListener() {
         });
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_730A7A75-F473-4083-93B9-85E0DAF7F4BD", "dupContextEntryKey");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_730A7A75-F473-4083-93B9-85E0DAF7F4BD", "dupContextEntryKey");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -3676,7 +3676,7 @@ public class DMNRuntimeTest extends BaseInterpretedVsCompiledTest {
     void kieIssue270(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("habitability.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_93836704-04E9-45B6-8D10-51409FEBDF25", "habitability");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_93836704-04E9-45B6-8D10-51409FEBDF25", "habitability");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

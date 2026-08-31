@@ -34,7 +34,7 @@ public class MyTestRegister implements DMNExtensionRegister {
 
     @Override
     public void beforeMarshal(Object o, QNameMap qmap) {
-        qmap.registerMapping(new QName("https://github.com/kiegroup/drools", "mykieext", "kie"), "mykieext");
+        qmap.registerMapping(new QName("https://github.com/kubesmarts/drools", "mykieext", "kie"), "mykieext");
         qmap.registerMapping(new QName("http://drools.org", "mydroolsext", "drools"), "mydroolsext");
     }
     

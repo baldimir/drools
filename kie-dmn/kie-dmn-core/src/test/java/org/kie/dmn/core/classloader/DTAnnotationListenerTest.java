@@ -87,7 +87,7 @@ public class DTAnnotationListenerTest {
 
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("license.dmn", this.getClass());
         runtime.addListener(listenerUT);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_1F095E5D-0E50-4564-9A76-DD4735BF938A", "license");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_1F095E5D-0E50-4564-9A76-DD4735BF938A", "license");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

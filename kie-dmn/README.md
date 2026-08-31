@@ -20,7 +20,7 @@
 Developing Drools and jBPM
 ==========================
 
-**If you want to build or contribute to a kiegroup project, [read this document](https://github.com/kiegroup/droolsjbpm-build-bootstrap/blob/main/README.md).**
+**If you want to build or contribute to a kubesmarts project, [read this document](https://github.com/kubesmarts/droolsjbpm-build-bootstrap/blob/main/README.md).**
 
 **It will save you and us a lot of time by setting up your development environment correctly.**
 It solves all known pitfalls that can disrupt your development.

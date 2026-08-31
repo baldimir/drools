@@ -132,7 +132,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void javaKeywords(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("javaKeywords.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_C41C1676-0DA9-47EA-90AD-F9BAA257129F", "A1B1A8AD-B0DC-453D-86A7-C9475450C982");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_C41C1676-0DA9-47EA-90AD-F9BAA257129F", "A1B1A8AD-B0DC-453D-86A7-C9475450C982");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -159,7 +159,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void innerComposite(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("innerComposite.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_641BCEBF-8D10-4E08-B47F-A9181C737A82", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_641BCEBF-8D10-4E08-B47F-A9181C737A82", "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -194,7 +194,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void fixInnerComposite(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("fixInnerComposite.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_E82058C1-27D3-44F3-B1B3-4C02D17B7A05", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_E82058C1-27D3-44F3-B1B3-4C02D17B7A05", "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -220,7 +220,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void innerCompositeCollection(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("innerCompositeCollection.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_D8AE5AF4-1F9E-4423-873A-B8F3C3BE5FE5", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_D8AE5AF4-1F9E-4423-873A-B8F3C3BE5FE5", "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -249,7 +249,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void inputAny(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("inputAny.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_7D9140EF-DC52-4DC1-8983-9C2EC5B89BAE", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_7D9140EF-DC52-4DC1-8983-9C2EC5B89BAE", "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -315,7 +315,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void listBasic(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("listBasic.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_B84B17F3-3E84-4DED-996E-AA630A6BF9C4", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_B84B17F3-3E84-4DED-996E-AA630A6BF9C4", "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -351,7 +351,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void listBasicLOVerror(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("listBasic.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_B84B17F3-3E84-4DED-996E-AA630A6BF9C4", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_B84B17F3-3E84-4DED-996E-AA630A6BF9C4", "new-file");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -419,7 +419,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void fieldCapitalization(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntimeWithAdditionalResources("Traffic Violation.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF", "Traffic Violation");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -579,7 +579,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void capitalLetterConflict(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("capitalLetterConflict.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_B321C9B1-856E-45DE-B05D-5B4D4D301D37", "capitalLetterConflict");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_B321C9B1-856E-45DE-B05D-5B4D4D301D37", "capitalLetterConflict");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -622,7 +622,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void capitalLetterConflictWithInputAndDecision(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("capitalLetterConflictWithInputAndDecision.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_EE9DAFC0-D50D-4D23-8676-FF8A40E02919", "capitalLetterConflictWithInputAndDecision");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_EE9DAFC0-D50D-4D23-8676-FF8A40E02919", "capitalLetterConflictWithInputAndDecision");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -654,7 +654,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void capitalLetterConflictItemDef(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("capitalLetterConflictItemDef.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_DA986720-823F-4334-8AB5-5CBA76FD1B9E", "capitalLetterConflictItemDef");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_DA986720-823F-4334-8AB5-5CBA76FD1B9E", "capitalLetterConflictItemDef");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -687,7 +687,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void shareTypeForInputAndOutput(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("shareTypeForInputAndOutput.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_DBEFBA7B-C568-4631-A89E-AA31F7C6564B", "shareTypeForInputAndOutput");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_DBEFBA7B-C568-4631-A89E-AA31F7C6564B", "shareTypeForInputAndOutput");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -761,7 +761,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("topLevelCompositeCollection.dmn", this.getClass());
         final DMNModel dmnModel = runtime.getModel(
-                "https://kiegroup.org/dmn/_3ED2F714-24F0-4764-88FA-04217901C05A", "topLevelCompositeCollection");
+                "https://kubesmarts.org/dmn/_3ED2F714-24F0-4764-88FA-04217901C05A", "topLevelCompositeCollection");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -798,7 +798,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void componentCollection(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("collections.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_2A93F258-EF3B-4150-A202-1D02A893DF2B", "collections");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_2A93F258-EF3B-4150-A202-1D02A893DF2B", "collections");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -846,7 +846,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void componentCollectionPassTypedObject(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("collectionsPassTypedObject.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_10C4DB2B-1DCA-4B4F-A994-FA046AE5C7B0", "collectionsPassTypedObject");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_10C4DB2B-1DCA-4B4F-A994-FA046AE5C7B0", "collectionsPassTypedObject");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -895,7 +895,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void evaluateByIdAndName(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntimeWithAdditionalResources("2decisions.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_6453A539-85B5-4A4E-800E-6721C50B6B55", "2decisions");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_6453A539-85B5-4A4E-800E-6721C50B6B55", "2decisions");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -948,7 +948,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     public void testCollectionOfCollection(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("topLevelColOfCol.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_74636626-ACB0-4A1F-9AD3-D4E0AFA1A24A", "topLevelColOfCol");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_74636626-ACB0-4A1F-9AD3-D4E0AFA1A24A", "topLevelColOfCol");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -1004,7 +1004,7 @@ public class DMNRuntimeTypesTest extends BaseVariantTest {
     void collectionOfCollectionOfCollection(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("topLevelColOfColOfCol.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_74636626-ACB0-4A1F-9AD3-D4E0AFA1A24A", "topLevelColOfColOfCol");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_74636626-ACB0-4A1F-9AD3-D4E0AFA1A24A", "topLevelColOfColOfCol");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

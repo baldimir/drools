@@ -61,7 +61,7 @@ class ValidatorInformationRequirementTest extends AbstractValidatorTest {
     void inforeq_missing_input_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "informationrequirement/INFOREQ_MISSING_INPUT.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "INFOREQ_MISSING_INPUT"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -95,7 +95,7 @@ class ValidatorInformationRequirementTest extends AbstractValidatorTest {
     void inforeq_input_not_inputdata_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "informationrequirement/INFOREQ_INPUT_NOT_INPUTDATA.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "INFOREQ_INPUT_NOT_INPUTDATA"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -129,7 +129,7 @@ class ValidatorInformationRequirementTest extends AbstractValidatorTest {
     void inforeq_missing_decision_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "informationrequirement/INFOREQ_MISSING_DECISION.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "INFOREQ_MISSING_DECISION"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -163,7 +163,7 @@ class ValidatorInformationRequirementTest extends AbstractValidatorTest {
     void inforeq_decision_not_decision_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "informationrequirement/INFOREQ_DECISION_NOT_DECISION.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "INFOREQ_DECISION_NOT_DECISION"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(4);

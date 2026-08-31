@@ -22,9 +22,9 @@
 
 
 <definitions id="_simple-item-def" name="simple-item-def"
-	namespace="https://github.com/kiegroup/kie-dmn/itemdef"
+	namespace="https://github.com/kubesmarts/kie-dmn/itemdef"
 	xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
-	xmlns:kie="https://github.com/kiegroup/kie-dmn/itemdef"
+	xmlns:kie="https://github.com/kubesmarts/kie-dmn/itemdef"
 	xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
 	<itemDefinition name="tSalary" id="_tSalary">
 		<typeRef>feel:number</typeRef>

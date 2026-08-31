@@ -50,7 +50,7 @@ class DMNExtensionRegisterTest {
             assertThat(System.getProperty("org.kie.dmn.profiles.FirstNameLastNameProfile")).isEqualTo(FirstNameLastNameProfile.class.getCanonicalName());
             
             final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0001-input-data-string-with-extensions.dmn", this.getClass() );
-            final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0001-input-data-string" );
+            final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0001-input-data-string" );
             assertThat(dmnModel).isNotNull();
             assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -102,7 +102,7 @@ class DMNExtensionRegisterTest {
         final KieContainer kieContainer = ks.newKieContainer(ks.getRepository().getDefaultReleaseId());
         
         final DMNRuntime runtime = kieContainer.newKieSession().getKieRuntime(DMNRuntime.class);
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -147,7 +147,7 @@ class DMNExtensionRegisterTest {
         final KieContainer kieContainer = ks.newKieContainer(ks.getRepository().getDefaultReleaseId());
         
         final DMNRuntime runtime = kieContainer.newKieSession().getKieRuntime(DMNRuntime.class);
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0001-input-data-string" );
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0001-input-data-string" );
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

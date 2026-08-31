@@ -21,7 +21,7 @@
 <!-- THIS IS AN OLD VERSION OF DMN EXAMPLE/TEST, PLEASE USE THE MORE RECENT VERSION -->
 
 <definitions id="DROOLS-1447" name="DROOLS-1447"
-  namespace="https://github.com/kiegroup/kie-dmn" xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
+  namespace="https://github.com/kubesmarts/kie-dmn" xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
   xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <extensionElements />
   <decision id="_c7523fa1-22af-4673-8990-fdf920b35667" name="Decision Logic 1" >

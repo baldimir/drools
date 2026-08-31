@@ -59,7 +59,7 @@ class ValidatorKnowledgeRequirementTest extends AbstractValidatorTest {
     void knowreq_missing_bkm_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "knowledgerequirement/KNOWREQ_MISSING_BKM.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "KNOWREQ_MISSING_BKM"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).withFailMessage(ValidatorUtil.formatMessages(validate)).hasSize(4);
@@ -93,7 +93,7 @@ class ValidatorKnowledgeRequirementTest extends AbstractValidatorTest {
     void knowreq_req_decision_not_bkm_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions( "knowledgerequirement/KNOWREQ_REQ_DECISION_NOT_BKM.dmn",
-                                "https://github.com/kiegroup/kie-dmn",
+                                "https://github.com/kubesmarts/kie-dmn",
                                 "KNOWREQ_REQ_DECISION_NOT_BKM"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).withFailMessage(ValidatorUtil.formatMessages(validate)).hasSize(4);

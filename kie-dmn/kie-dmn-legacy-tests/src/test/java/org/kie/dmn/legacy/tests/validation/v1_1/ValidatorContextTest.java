@@ -63,7 +63,7 @@ class ValidatorContextTest extends AbstractValidatorTest {
     void context_missing_expr_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("context/CONTEXT_MISSING_EXPR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "CONTEXT_MISSING_EXPR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -94,7 +94,7 @@ class ValidatorContextTest extends AbstractValidatorTest {
     void context_missing_entries_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("context/CONTEXT_MISSING_ENTRIES.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "CONTEXT_MISSING_EXPR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -131,7 +131,7 @@ class ValidatorContextTest extends AbstractValidatorTest {
     void context_entry_missing_variable_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("context/CONTEXT_ENTRY_MISSING_VARIABLE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "CONTEXT_MISSING_EXPR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -165,7 +165,7 @@ class ValidatorContextTest extends AbstractValidatorTest {
     void context_dup_entry_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("context/CONTEXT_DUP_ENTRY.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "CONTEXT_DUP_ENTRY"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -196,7 +196,7 @@ class ValidatorContextTest extends AbstractValidatorTest {
     void context_entry_notyperef_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("context/CONTEXT_ENTRY_NOTYPEREF.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "CONTEXT_ENTRY_NOTYPEREF"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);

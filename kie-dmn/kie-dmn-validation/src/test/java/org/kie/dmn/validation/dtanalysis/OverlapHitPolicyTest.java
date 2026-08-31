@@ -55,7 +55,7 @@ public class OverlapHitPolicyTest extends AbstractDTAnalysisTest {
     @ParameterizedTest(name = "using {0}")
     public void overlapHitPolicy(HitPolicy hp) {
         initOverlapHitPolicyTest(hp);
-        Definitions definitions = getDefinitions("OverlapHitPolicy.dmn", "https://github.com/kiegroup/drools/kie-dmn/_3010653A-DD3F-4C88-89DA-3FDD845F6604", "OverlapHitPolicy");
+        Definitions definitions = getDefinitions("OverlapHitPolicy.dmn", "https://github.com/kubesmarts/drools/kie-dmn/_3010653A-DD3F-4C88-89DA-3FDD845F6604", "OverlapHitPolicy");
 
         // mutates XML file in the Hit Policy, accordingly to this test parameter.
         ((DecisionTable) ((Decision) definitions.getDrgElement().get(0)).getExpression()).setHitPolicy(hp);

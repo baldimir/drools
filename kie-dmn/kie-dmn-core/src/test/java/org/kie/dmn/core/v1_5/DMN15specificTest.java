@@ -77,7 +77,7 @@ public class DMN15specificTest extends BaseVariantTest {
     public void dMNv15PutAll(final VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("exampleContextMerge.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_864E9A62-12E5-41DC-A7A6-7F028822A067", "examplePutAll");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_864E9A62-12E5-41DC-A7A6-7F028822A067", "examplePutAll");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).describedAs(formatMessages(dmnModel.getMessages())).isFalse();
 

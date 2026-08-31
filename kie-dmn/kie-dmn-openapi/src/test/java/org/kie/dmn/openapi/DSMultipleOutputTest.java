@@ -34,7 +34,7 @@ class DSMultipleOutputTest extends BaseDMNOASTest {
         final DMNRuntime runtime = createRuntime("DSMultipleOutput.dmn", this.getClass());
         DMNOASResult result = DMNOASGeneratorFactory.generator(runtime.getModels()).build();
 
-        DMNModel modelUnderTest = runtime.getModel("https://kiegroup.org/dmn/_A289CCD2-6759-47F6-87CD-F8E12880053F", "DSMultipleOutput");
+        DMNModel modelUnderTest = runtime.getModel("https://kubesmarts.org/dmn/_A289CCD2-6759-47F6-87CD-F8E12880053F", "DSMultipleOutput");
         ObjectNode syntheticJSONSchema = synthesizeSchemaForDS(result, modelUnderTest, "DecisionService-1");
         JsonSchema validator = getJSONSchema(syntheticJSONSchema);
 

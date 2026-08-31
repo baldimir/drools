@@ -67,7 +67,7 @@ class ValidatorDecisionServiceTest extends AbstractValidatorTest {
     void output_not_found_for_ds_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("decisionservice/HelloDS_noOutput.dmn",
-                               "https://kiegroup.org/dmn/_7C3C7416-2F33-4718-AE35-F3843C5250DB",
+                               "https://kubesmarts.org/dmn/_7C3C7416-2F33-4718-AE35-F3843C5250DB",
                                "HelloDS"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);
@@ -77,7 +77,7 @@ class ValidatorDecisionServiceTest extends AbstractValidatorTest {
     @Test
     void okds() {
         DMNRuntime runtime = DMNRuntimeUtil.createRuntime("decisionservice/HelloDS_OK.dmn", this.getClass());
-        DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_7C3C7416-2F33-4718-AE35-F3843C5250DB",
+        DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_7C3C7416-2F33-4718-AE35-F3843C5250DB",
                                              "HelloDS");
         assertThat(dmnModel).isNotNull();
 
@@ -96,7 +96,7 @@ class ValidatorDecisionServiceTest extends AbstractValidatorTest {
     @Test
     void dS1ofEach() {
         DMNRuntime runtime = DMNRuntimeUtil.createRuntime("decisionservice/DS1ofEach_OK.dmn", this.getClass());
-        DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
+        DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
                                              "DS1ofEach");
         assertThat(dmnModel).isNotNull();
 
@@ -139,7 +139,7 @@ class ValidatorDecisionServiceTest extends AbstractValidatorTest {
     @Test
     void encapsulated_not_found_for_ds_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(getDefinitions("decisionservice/DS1ofEach_missingEncapsulated.dmn",
-                                                                            "https://kiegroup.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
+                                                                            "https://kubesmarts.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
                                                                             "DS1ofEach"),
                                                              VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSizeGreaterThanOrEqualTo(2);
@@ -170,7 +170,7 @@ class ValidatorDecisionServiceTest extends AbstractValidatorTest {
     @Test
     void decisioninput_not_found_for_ds_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(getDefinitions("decisionservice/DS1ofEach_missingDecisionInput.dmn",
-                                                                            "https://kiegroup.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
+                                                                            "https://kubesmarts.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
                                                                             "DS1ofEach"),
                                                              VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSizeGreaterThanOrEqualTo(2);
@@ -201,7 +201,7 @@ class ValidatorDecisionServiceTest extends AbstractValidatorTest {
     @Test
     void inputdata_not_found_for_ds_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(getDefinitions("decisionservice/DS1ofEach_missingInputData.dmn",
-                                                                            "https://kiegroup.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
+                                                                            "https://kubesmarts.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
                                                                             "DS1ofEach"),
                                                              VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSizeGreaterThanOrEqualTo(2);
@@ -230,7 +230,7 @@ class ValidatorDecisionServiceTest extends AbstractValidatorTest {
     @Test
     void outputelement_not_found_for_ds_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(getDefinitions("decisionservice/DS1ofEach_missingOutput.dmn",
-                                                                            "https://kiegroup.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
+                                                                            "https://kubesmarts.org/dmn/_40B3D02F-868C-4925-A1F2-5710DFEEF51E",
                                                                             "DS1ofEach"),
                                                              VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSizeGreaterThanOrEqualTo(2);

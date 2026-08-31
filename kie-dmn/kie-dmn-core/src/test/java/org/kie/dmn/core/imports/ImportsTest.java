@@ -592,12 +592,12 @@ public class ImportsTest extends BaseInterpretedVsCompiledTest {
                                                                                        this.getClass(),
                                                                                        "importingSum.dmn");
 
-        final DMNModel importedModel = runtime.getModel("https://kiegroup.org/dmn/_FCC62740-4998-47A2-B5F2-CB3E15C98419",
+        final DMNModel importedModel = runtime.getModel("https://kubesmarts.org/dmn/_FCC62740-4998-47A2-B5F2-CB3E15C98419",
                                                         "baseSum");
         assertThat(importedModel).isNotNull();
         assertThat(importedModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(importedModel.getMessages())).isFalse();
 
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_1D35A3BF-1DBD-4CD0-882A-CA068C6F2A67",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_1D35A3BF-1DBD-4CD0-882A-CA068C6F2A67",
                                                    "importingSum");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -621,12 +621,12 @@ public class ImportsTest extends BaseInterpretedVsCompiledTest {
                                                                                        this.getClass(),
                                                                                        "Import_ComparatorModel_and_alias_with_dots.dmn");
 
-        final DMNModel importedModel = runtime.getModel("https://kiegroup.org/dmn/_33A94A92-E771-4ED3-8C20-A76EA13D6A2E",
+        final DMNModel importedModel = runtime.getModel("https://kubesmarts.org/dmn/_33A94A92-E771-4ED3-8C20-A76EA13D6A2E",
                                                         "ComparatorModel");
         assertThat(importedModel).isNotNull();
         assertThat(importedModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(importedModel.getMessages())).isFalse();
 
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_5774C21E-74F2-41D8-9AC6-FE0DAEA5C3DB",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_5774C21E-74F2-41D8-9AC6-FE0DAEA5C3DB",
                                                    "Import_ComparatorModel_and_alias_with_dots");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
@@ -650,12 +650,12 @@ public class ImportsTest extends BaseInterpretedVsCompiledTest {
                                                                                        this.getClass(),
                                                                                        "Import_ComparatorModelNamedWithDots_and_alias_with_dots.dmn");
 
-        final DMNModel importedModel = runtime.getModel("https://kiegroup.org/dmn/_F0CCDEC6-F439-421B-8259-87878AC367C9",
+        final DMNModel importedModel = runtime.getModel("https://kubesmarts.org/dmn/_F0CCDEC6-F439-421B-8259-87878AC367C9",
                                                         "ComparatorModelNamedWithDots");
         assertThat(importedModel).isNotNull();
         assertThat(importedModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(importedModel.getMessages())).isFalse();
 
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_8DC3A181-D49E-4752-A898-AB04C2B2A856",
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_8DC3A181-D49E-4752-A898-AB04C2B2A856",
                                                    "Import_ComparatorModelNamedWithDots_and_alias_with_dots");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();

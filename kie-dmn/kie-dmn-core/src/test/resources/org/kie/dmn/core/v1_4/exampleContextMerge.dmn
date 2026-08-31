@@ -17,7 +17,7 @@
   under the License.
   -->
 
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_864E9A62-12E5-41DC-A7A6-7F028822A067" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_856C4DCE-8BAB-4E6C-9CD1-8B07EF4EF0C8" name="examplePutAll" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_864E9A62-12E5-41DC-A7A6-7F028822A067">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kubesmarts.org/dmn/_864E9A62-12E5-41DC-A7A6-7F028822A067" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_856C4DCE-8BAB-4E6C-9CD1-8B07EF4EF0C8" name="examplePutAll" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kubesmarts.org/dmn/_864E9A62-12E5-41DC-A7A6-7F028822A067">
   <dmn:extensionElements/>
   <dmn:itemDefinition id="_DF019628-1A0F-4974-BA85-228C0B82A804" name="tPerson" isCollection="false">
     <dmn:itemComponent id="_D0ADF15D-C5D5-4D1B-9828-7A561D8232C5" name="first name" isCollection="false">

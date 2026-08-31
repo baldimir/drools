@@ -141,7 +141,7 @@ public class DMNDecisionTableRuntimeTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableMultipleOutputWrongOutputType(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0004-simpletable-P-multiple-outputs-wrong-output.dmn", this.getClass() );
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "0004-simpletable-P-multiple-outputs-wrong-output" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "0004-simpletable-P-multiple-outputs-wrong-output" );
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = DMNFactory.newContext();
@@ -220,7 +220,7 @@ public class DMNDecisionTableRuntimeTest extends BaseDMN1_1VariantTest {
         final DMNRuntimeEventListener listener = Mockito.mock( DMNRuntimeEventListener.class );
         runtime.addListener( listener );
 
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "decisiontable-default-value" );
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "decisiontable-default-value" );
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

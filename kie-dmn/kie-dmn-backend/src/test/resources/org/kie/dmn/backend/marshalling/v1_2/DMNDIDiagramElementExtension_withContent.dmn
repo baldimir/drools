@@ -31,7 +31,7 @@
                       xmlns:include1="http://www.trisotech.com/definitions/_e021d837-afc9-48f8-a5bf-b8237f264ec7" 
                       xmlns="http://www.trisotech.com/dmn/definitions/_f698a378-7ae4-460f-9ca7-5f90b165376e" 
                       xmlns:drools="http://drools.org"
-                      xmlns:kie="https://github.com/kiegroup/drools"
+                      xmlns:kie="https://github.com/kubesmarts/drools"
                       id="_f698a378-7ae4-460f-9ca7-5f90b165376e" namespace="http://www.trisotech.com/dmn/definitions/_f698a378-7ae4-460f-9ca7-5f90b165376e"          exporter="DMN Modeler" exporterVersion="6.1.6.1" name="Drawing 1" triso:logoChoice="Default">
     <semantic:extensionElements/>
     <semantic:decision id="_85d841f6-66d7-43e7-a0f0-3a79fd2661be" name="hardcoded decision">

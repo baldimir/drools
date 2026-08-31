@@ -44,7 +44,7 @@ public class MarshallingStubUtilsTest extends BaseVariantTest {
     void comparablePeriod(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("comparablePeriod.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_CB283B9C-8581-447E-8625-4D1186F0B3A6", "A1B0FA02-D1C4-4386-AF36-0280AA45A7B7");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_CB283B9C-8581-447E-8625-4D1186F0B3A6", "A1B0FA02-D1C4-4386-AF36-0280AA45A7B7");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = runtime.newContext();

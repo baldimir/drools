@@ -25,7 +25,7 @@ default:
       mvn clean install -Dquickly ${{ env.BUILD_MVN_OPTS }} ${{ env.BUILD_MVN_OPTS_UPSTREAM }}
 
 build:
-  - project: kiegroup/drools
+  - project: kubesmarts/drools
     build-command:
       current: |
         export MVN_CMD=`bash -c "if [ '${{ env.ENABLE_DEPLOY }}' = 'true' ]; then printf 'deploy ${{ env.DEPLOY_MVN_OPTS }} ${{ env.DROOLS_DEPLOY_MVN_OPTS }}'; else printf 'install'; fi"`
@@ -33,7 +33,7 @@ build:
       upstream: |
         mvn clean install -Dquickly ${{ env.BUILD_MVN_OPTS }} ${{ env.BUILD_MVN_OPTS_UPSTREAM }} ${{ env.DROOLS_BUILD_MVN_OPTS_UPSTREAM }}
   
-  - project: kiegroup/kogito-runtimes
+  - project: kubesmarts/kogito-runtimes
     build-command:
       current: |
         export MVN_CMD=`bash -c "if [ '${{ env.ENABLE_DEPLOY }}' = 'true' ]; then printf 'deploy ${{ env.DEPLOY_MVN_OPTS }} ${{ env.KOGITO_RUNTIMES_DEPLOY_MVN_OPTS }}'; else printf 'install'; fi"`
@@ -41,7 +41,7 @@ build:
       upstream: |
         mvn clean install -Dquickly ${{ env.BUILD_MVN_OPTS }} ${{ env.BUILD_MVN_OPTS_UPSTREAM }} ${{ env.KOGITO_RUNTIMES_BUILD_MVN_OPTS_UPSTREAM }}
 
-  - project: kiegroup/kogito-apps
+  - project: kubesmarts/kogito-apps
     build-command: 
       current: |
         export MVN_CMD=`bash -c "if [ '${{ env.ENABLE_DEPLOY }}' = 'true' ]; then printf 'deploy ${{ env.DEPLOY_MVN_OPTS }} ${{ env.KOGITO_APPS_DEPLOY_MVN_OPTS }}'; else printf 'install'; fi"`
@@ -49,7 +49,7 @@ build:
       upstream: |
         mvn clean install -Dquickly ${{ env.BUILD_MVN_OPTS }} ${{ env.BUILD_MVN_OPTS_UPSTREAM }} ${{ env.KOGITO_APPS_BUILD_MVN_OPTS_UPSTREAM }}
 
-  - project: kiegroup/kogito-examples
+  - project: kubesmarts/kogito-examples
     build-command:
       # First install the main pom
       # Then build the required submodule pom
@@ -60,7 +60,7 @@ build:
       upstream: |
         mvn clean install -DskipTests -DskipITs ${{ env.BUILD_MVN_OPTS }} ${{ env.BUILD_MVN_OPTS_UPSTREAM }} ${{ env.KOGITO_EXAMPLES_BUILD_MVN_OPTS_UPSTREAM }}
 
- # - project: kiegroup/kie-jpmml-integration
+ # - project: kubesmarts/kie-jpmml-integration
  #   build-command:
  #     current: |
  #       export MVN_CMD=`bash -c "if [ '${{ env.ENABLE_DEPLOY }}' = 'true' ]; then printf 'deploy ${{ env.DEPLOY_MVN_OPTS }} ${{ env.KIE_JPMML_INTEGRATION_DEPLOY_MVN_OPTS }}'; else printf 'install'; fi"`

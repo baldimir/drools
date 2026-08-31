@@ -18,9 +18,9 @@
   under the License.
   -->
 
-<dmn:definitions xmlns:dmn="https://www.omg.org/spec/DMN/20240513/MODEL/" xmlns="https://kiegroup.org/dmn/_B2585232-1873-43C5-9D9D-BFD7A93BC51B" xmlns:routes="https://kiegroup.org/dmn/_68BFD4F6-B486-4A1F-9C5B-4BBF1718614E" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_03C5216B-FB6F-4DB2-A94B-479CEB5FCDA6" name="app" expressionLanguage="https://www.omg.org/spec/DMN/20240513/FEEL/" typeLanguage="https://www.omg.org/spec/DMN/20240513/FEEL/" namespace="https://kiegroup.org/dmn/_B2585232-1873-43C5-9D9D-BFD7A93BC51B">
+<dmn:definitions xmlns:dmn="https://www.omg.org/spec/DMN/20240513/MODEL/" xmlns="https://kubesmarts.org/dmn/_B2585232-1873-43C5-9D9D-BFD7A93BC51B" xmlns:routes="https://kubesmarts.org/dmn/_68BFD4F6-B486-4A1F-9C5B-4BBF1718614E" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_03C5216B-FB6F-4DB2-A94B-479CEB5FCDA6" name="app" expressionLanguage="https://www.omg.org/spec/DMN/20240513/FEEL/" typeLanguage="https://www.omg.org/spec/DMN/20240513/FEEL/" namespace="https://kubesmarts.org/dmn/_B2585232-1873-43C5-9D9D-BFD7A93BC51B">
   <dmn:extensionElements/>
-  <dmn:import id="_8D0C0DEB-D75D-4083-9EB3-B3D9F0716970" name="routes" namespace="https://kiegroup.org/dmn/_68BFD4F6-B486-4A1F-9C5B-4BBF1718614E" locationURI="default://DEFAULT_BRANCH@MySpace/routes/src/main/resources/com/myspace/routes/route.dmn" importType="https://www.omg.org/spec/DMN/20230324/MODEL/"/>
+  <dmn:import id="_8D0C0DEB-D75D-4083-9EB3-B3D9F0716970" name="routes" namespace="https://kubesmarts.org/dmn/_68BFD4F6-B486-4A1F-9C5B-4BBF1718614E" locationURI="default://DEFAULT_BRANCH@MySpace/routes/src/main/resources/com/myspace/routes/route.dmn" importType="https://www.omg.org/spec/DMN/20230324/MODEL/"/>
   <dmn:inputData id="_516156F6-68C1-4E2E-BFEA-AE494716D054" name="local">
     <dmn:variable id="_88C36760-283E-401F-A34A-873C879890C0" name="local" typeRef="routes.tRoute"/>
   </dmn:inputData>
@@ -33,7 +33,7 @@
       <dmn:requiredInput href="#_516156F6-68C1-4E2E-BFEA-AE494716D054"/>
     </dmn:informationRequirement>
     <dmn:knowledgeRequirement id="_C7E854EA-FF87-45F4-AB63-D4E9A3AA4369">
-      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_68BFD4F6-B486-4A1F-9C5B-4BBF1718614E#_EE9CAB62-F704-4923-B09A-17D0A389EFDB"/>
+      <dmn:requiredKnowledge href="https://kubesmarts.org/dmn/_68BFD4F6-B486-4A1F-9C5B-4BBF1718614E#_EE9CAB62-F704-4923-B09A-17D0A389EFDB"/>
     </dmn:knowledgeRequirement>
     <dmn:context id="_34E0F09F-2EE4-41DE-B7C8-680C3066F00D">
       <dmn:contextEntry>

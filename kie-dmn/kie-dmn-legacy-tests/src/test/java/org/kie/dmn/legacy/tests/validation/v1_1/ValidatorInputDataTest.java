@@ -59,7 +59,7 @@ class ValidatorInputDataTest extends AbstractValidatorTest {
     void input_missing_var_DefintionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("inputdata/INPUTDATA_MISSING_VAR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "INPUTDATA_MISSING_VAR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -90,7 +90,7 @@ class ValidatorInputDataTest extends AbstractValidatorTest {
     void input_mismatch_var_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("inputdata/INPUTDATA_MISMATCH_VAR.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "INPUTDATA_MISSING_VAR"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
         assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(1);

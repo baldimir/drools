@@ -72,7 +72,7 @@ To execute a dmn model, it is necessary to:
    ``` 
 2. get the instance of `DMNModel` out of the former; e.g.
     ```java
-      DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn/itemdef", "simple-item-def" );
+      DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn/itemdef", "simple-item-def" );
    ```
 3. instantiate a [DMNContext](kie-dmn-api%2Fsrc%2Fmain%2Fjava%2Forg%2Fkie%2Fdmn%2Fapi%2Fcore%2FDMNContext.java) with the required input; e.g.
     ```java

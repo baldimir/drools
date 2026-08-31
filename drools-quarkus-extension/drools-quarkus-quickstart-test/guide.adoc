@@ -53,7 +53,7 @@ We will wire the Rule Unit into a standard Quarkus CDI bean, for use in the Quar
 
 We recommend that you follow the instructions in the next sections and create the application step by step.
 
-However, you can go explore the original example at the following link: https://github.com/kiegroup/drools/tree/main/drools-quarkus-extension/drools-quarkus-quickstart-test
+However, you can go explore the original example at the following link: https://github.com/kubesmarts/drools/tree/main/drools-quarkus-extension/drools-quarkus-quickstart-test
 
 == Creating the Maven Project
 

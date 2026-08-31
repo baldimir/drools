@@ -44,7 +44,7 @@ public abstract class DMNKMeansModelPMMLTest {
                                                                       DMNKMeansModelPMMLTest.class,
                                                                       "test_kmeans.pmml");
 
-        dmnModel = runtime.getModel("https://kiegroup.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456", "KMeansDMN");
+        dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_51A1FD67-8A67-4332-9889-B718BE8B7456", "KMeansDMN");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).isFalse();
 

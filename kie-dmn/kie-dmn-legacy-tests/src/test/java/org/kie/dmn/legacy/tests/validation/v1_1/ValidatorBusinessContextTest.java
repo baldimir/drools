@@ -59,7 +59,7 @@ class ValidatorBusinessContextTest extends AbstractValidatorTest {
     void org_unit_decision_made_wrong_type_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("businesscontext/ORG_UNIT_DECISION_MADE_WRONG_TYPE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "ORG_UNIT_DECISION_MADE_WRONG_TYPE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -90,7 +90,7 @@ class ValidatorBusinessContextTest extends AbstractValidatorTest {
     void org_unit_decision_owned_wrong_type_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("businesscontext/ORG_UNIT_DECISION_OWNED_WRONG_TYPE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "ORG_UNIT_DECISION_OWNED_WRONG_TYPE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);
@@ -121,7 +121,7 @@ class ValidatorBusinessContextTest extends AbstractValidatorTest {
     void perf_indicator_imp_decision_wrong_type_DefinitionsInput() {
         final List<DMNMessage> validate = validator.validate(
                 getDefinitions("businesscontext/PERF_INDICATOR_IMP_DECISION_WRONG_TYPE.dmn",
-                               "https://github.com/kiegroup/kie-dmn",
+                               "https://github.com/kubesmarts/kie-dmn",
                                "PERF_INDICATOR_IMP_DECISION_WRONG_TYPE"),
                 VALIDATE_MODEL, VALIDATE_COMPILATION);
          assertThat(validate).as(ValidatorUtil.formatMessages(validate)).hasSize(2);

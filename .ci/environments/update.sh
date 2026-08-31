@@ -45,4 +45,4 @@ if [ -f "${env_path}/after.sh" ]; then
 fi
 
 # Download `setup_integration_branch` script and execute
-curl -s https://raw.githubusercontent.com/kiegroup/kogito-pipelines/main/dsl/seed/scripts/setup_integration_branch.sh | bash
+curl -s https://raw.githubusercontent.com/kubesmarts/kogito-pipelines/main/dsl/seed/scripts/setup_integration_branch.sh | bash

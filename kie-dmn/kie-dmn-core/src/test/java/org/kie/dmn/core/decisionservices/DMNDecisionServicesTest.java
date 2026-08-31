@@ -645,7 +645,7 @@ public class DMNDecisionServicesTest extends BaseInterpretedVsCompiledTest {
     void importingBasic(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntimeWithAdditionalResources("0004-decision-services.dmn", this.getClass(), "importing0004.dmn");
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_346B2E00-71E5-4CEA-ADE1-7A0872481F38", "importing0004");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_346B2E00-71E5-4CEA-ADE1-7A0872481F38", "importing0004");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -670,7 +670,7 @@ public class DMNDecisionServicesTest extends BaseInterpretedVsCompiledTest {
     void importingBoxedInvocation(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntimeWithAdditionalResources("0004-decision-services.dmn", this.getClass(), "importing0004boxedInvocation.dmn");
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_346B2E00-71E5-4CEA-ADE1-7A0872481F38", "importing0004");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_346B2E00-71E5-4CEA-ADE1-7A0872481F38", "importing0004");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -682,7 +682,7 @@ public class DMNDecisionServicesTest extends BaseInterpretedVsCompiledTest {
     void importingBkmBoxedInvocation(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntimeWithAdditionalResources("0004-decision-services.dmn", this.getClass(), "importing0004bkmBoxedInvocation.dmn");
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_0CA8CCDE-106B-4805-B0C1-8D8D740C80F7", "importing0004bkmBoxedInvocation");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_0CA8CCDE-106B-4805-B0C1-8D8D740C80F7", "importing0004bkmBoxedInvocation");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -694,7 +694,7 @@ public class DMNDecisionServicesTest extends BaseInterpretedVsCompiledTest {
     void importingWithSameDSName(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntimeWithAdditionalResources("myHelloDS.dmn", this.getClass(), "importingMyHelloDS.dmn");
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_3295867F-C02D-4312-849B-844F74C51ADE", "importingMyHelloDS");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_3295867F-C02D-4312-849B-844F74C51ADE", "importingMyHelloDS");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -718,7 +718,7 @@ public class DMNDecisionServicesTest extends BaseInterpretedVsCompiledTest {
     void importingWithSameDSNameBoxedInvocation(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntimeWithAdditionalResources("myHelloDS.dmn", this.getClass(), "importingMyHelloDSboxedInvocation.dmn");
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_3295867F-C02D-4312-849B-844F74C51ADE", "importingMyHelloDS");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_3295867F-C02D-4312-849B-844F74C51ADE", "importingMyHelloDS");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 
@@ -730,7 +730,7 @@ public class DMNDecisionServicesTest extends BaseInterpretedVsCompiledTest {
     void importingWithSameDSNameBKMBoxedInvocation(boolean useExecModelCompiler) {
         init(useExecModelCompiler);
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntimeWithAdditionalResources("myHelloDS.dmn", this.getClass(), "importingMyHelloDSbkmBoxedInvocation.dmn");
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_3295867F-C02D-4312-849B-844F74C51ADE", "importingMyHelloDS");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_3295867F-C02D-4312-849B-844F74C51ADE", "importingMyHelloDS");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

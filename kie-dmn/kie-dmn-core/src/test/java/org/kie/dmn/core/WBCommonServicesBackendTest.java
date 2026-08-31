@@ -71,7 +71,7 @@ public class WBCommonServicesBackendTest extends BaseInterpretedVsCompiledTest {
 
         checkApp(runtime);
 
-        // the below is performed by the WB at: https://github.com/kiegroup/kie-wb-common/blob/9e6b6da145e61ac8f5a9f7c0259d44aa9d090a2b/kie-wb-common-services/kie-wb-common-services-backend/src/main/java/org/kie/workbench/common/services/backend/builder/core/Builder.java#L592-L620
+        // the below is performed by the WB at: https://github.com/kubesmarts/kie-wb-common/blob/9e6b6da145e61ac8f5a9f7c0259d44aa9d090a2b/kie-wb-common-services/kie-wb-common-services-backend/src/main/java/org/kie/workbench/common/services/backend/builder/core/Builder.java#L592-L620
         final KieProject kieProject = new KieModuleKieProject((InternalKieModule) kieModule, null);
         final KieContainer kieContainer2 = new KieContainerImpl(kieProject, ks.getRepository(), v100);
         final KieSession kieSession2 = kieContainer2.newKieSession(); // exhibit the issue.
@@ -83,7 +83,7 @@ public class WBCommonServicesBackendTest extends BaseInterpretedVsCompiledTest {
     }
 
     private void checkApp(DMNRuntime runtime) {
-        DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_B2585232-1873-43C5-9D9D-BFD7A93BC51B", "app");
+        DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_B2585232-1873-43C5-9D9D-BFD7A93BC51B", "app");
         DMNContext context = runtime.newContext();
         context.set("local", mapOf(entry("distance", new BigDecimal(10))));
         context.set("highway", mapOf(entry("distance", new BigDecimal(5))));
@@ -114,7 +114,7 @@ public class WBCommonServicesBackendTest extends BaseInterpretedVsCompiledTest {
 
         check_nowGT1970(runtime);
 
-        // the below is performed by the WB at: https://github.com/kiegroup/kie-wb-common/blob/9e6b6da145e61ac8f5a9f7c0259d44aa9d090a2b/kie-wb-common-services/kie-wb-common-services-backend/src/main/java/org/kie/workbench/common/services/backend/builder/core/Builder.java#L592-L620
+        // the below is performed by the WB at: https://github.com/kubesmarts/kie-wb-common/blob/9e6b6da145e61ac8f5a9f7c0259d44aa9d090a2b/kie-wb-common-services/kie-wb-common-services-backend/src/main/java/org/kie/workbench/common/services/backend/builder/core/Builder.java#L592-L620
         final KieProject kieProject = new KieModuleKieProject((InternalKieModule) kieModule, null);
         final KieContainer kieContainer2 = new KieContainerImpl(kieProject, ks.getRepository(), v100);
         final DMNRuntime runtime2 = KieRuntimeFactory.of(kieContainer2.getKieBase()).get(DMNRuntime.class);
@@ -125,7 +125,7 @@ public class WBCommonServicesBackendTest extends BaseInterpretedVsCompiledTest {
     }
 
     private void check_nowGT1970(DMNRuntime runtime) {
-        DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_B359CA2D-0702-43E2-BDC5-E1AE54FD97E5", "new-file");
+        DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_B359CA2D-0702-43E2-BDC5-E1AE54FD97E5", "new-file");
         DMNContext context = runtime.newContext();
 
         final DMNResult dmnResult = runtime.evaluateAll(dmnModel, context);

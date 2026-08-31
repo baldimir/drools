@@ -69,7 +69,7 @@ public class DMNCompilerTest extends BaseVariantTest {
     void javadocSimple(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("javadocSimple.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_55F8F74F-3E9F-4FAA-BBF4-E6F9534B6B19", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_55F8F74F-3E9F-4FAA-BBF4-E6F9534B6B19", "new-file");
         assertThat(dmnModel).isNotNull();
 
         final DMNType tVowel = dmnModel.getItemDefinitionByName("tVowel").getType();
@@ -101,7 +101,7 @@ public class DMNCompilerTest extends BaseVariantTest {
     void javadocComposite(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("javadocComposite.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_7EC096B1-878B-4E85-8334-58B440BB6AD9", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_7EC096B1-878B-4E85-8334-58B440BB6AD9", "new-file");
         assertThat(dmnModel).isNotNull();
 
         final DMNType tPerson = dmnModel.getItemDefinitionByName("tPerson").getType();
@@ -124,7 +124,7 @@ public class DMNCompilerTest extends BaseVariantTest {
     void javadocInnerComposite(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("javadocInnerComposite.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_7EC096B1-878B-4E85-8334-58B440BB6AD9bis", "new-file");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_7EC096B1-878B-4E85-8334-58B440BB6AD9bis", "new-file");
         assertThat(dmnModel).isNotNull();
         
         DMNTypeRegistry typeRegistry = ((DMNModelImpl) dmnModel).getTypeRegistry();
@@ -166,7 +166,7 @@ public class DMNCompilerTest extends BaseVariantTest {
     void itemDefAllowedValuesString(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("0003-input-data-string-allowed-values.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0003-input-data-string-allowed-values" );
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0003-input-data-string-allowed-values" );
         assertThat(dmnModel).isNotNull();
 
         final ItemDefNode itemDef = dmnModel.getItemDefinitionByName("tEmploymentStatus" );
@@ -198,7 +198,7 @@ public class DMNCompilerTest extends BaseVariantTest {
     void compositeItemDefinition(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = createRuntime("0008-LX-arithmetic.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0008-LX-arithmetic" );
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0008-LX-arithmetic" );
         assertThat(dmnModel).isNotNull();
 
         final ItemDefNode itemDef = dmnModel.getItemDefinitionByName("tLoan" );
@@ -250,7 +250,7 @@ public class DMNCompilerTest extends BaseVariantTest {
         testConfig = conf;
         // DROOLS-2161
         final DMNRuntime runtime = createRuntime("Recursive.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "Recursive" );
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "Recursive" );
         assertThat(dmnModel).isNotNull();
         assertThat(evaluateModel(runtime, dmnModel, DMNFactory.newContext()).hasErrors()).isFalse();
     }

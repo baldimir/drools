@@ -68,7 +68,7 @@ public class DTListenerTest extends BaseInterpretedVsAlphaNetworkTest {
 
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("dtevent.dmn", this.getClass());
         runtime.addListener(listenerUT);
-        final DMNModel dmnModel = runtime.getModel("https://kiegroup.org/dmn/_0C86FAC6-5247-45D1-B410-9FCD7A6E07E7", "Untitled");
+        final DMNModel dmnModel = runtime.getModel("https://kubesmarts.org/dmn/_0C86FAC6-5247-45D1-B410-9FCD7A6E07E7", "Untitled");
         assertThat(dmnModel).isNotNull();
         assertThat(dmnModel.hasErrors()).as(DMNRuntimeUtil.formatMessages(dmnModel.getMessages())).isFalse();
 

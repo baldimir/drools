@@ -48,7 +48,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyUnique(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-U.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-U");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-U");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(18), "Medium", true);
@@ -61,7 +61,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyUniqueSatisfies(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-U.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-U");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-U");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(18), "ASD", false);
@@ -86,7 +86,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
         System.setProperty(RuntimeModeOption.PROPERTY_NAME, RuntimeModeOption.MODE.STRICT.getMode());
         try {
             final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-U.dmn", this.getClass());
-            final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-U");
+            final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-U");
             assertThat(dmnModel).isNotNull();
 
             final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(18), "Medium", true);
@@ -104,7 +104,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyUniqueNullWarn(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-U-noinputvalues.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-U-noinputvalues");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-U-noinputvalues");
         assertThat(dmnModel).isNotNull();
 
         check_testSimpleDecisionTableHitPolicyUniqueNullWarn(runtime, dmnModel);
@@ -125,7 +125,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyUniqueNullWarnCtxe(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-U-noinputvalues-ctxe.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-U-noinputvalues");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-U-noinputvalues");
         assertThat(dmnModel).isNotNull();
 
         check_testSimpleDecisionTableHitPolicyUniqueNullWarn(runtime, dmnModel);
@@ -136,7 +136,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyUniqueNullWarnCtxr(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-U-noinputvalues-ctxr.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-U-noinputvalues");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-U-noinputvalues");
         assertThat(dmnModel).isNotNull();
 
         check_testSimpleDecisionTableHitPolicyUniqueNullWarn(runtime, dmnModel);
@@ -166,7 +166,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyFirst(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-F.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-F");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-F");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(18), "Medium", true);
@@ -193,7 +193,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
 
     private void testSimpleDecisionTableHitPolicyAny(final String resurceName, final String modelName, final boolean equalRules) {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime(resurceName, this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", modelName);
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", modelName);
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(18), "Medium", true);
@@ -212,7 +212,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyPriority(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-P.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-P");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-P");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(70), "Medium", true);
@@ -225,7 +225,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyPriorityMultipleOutputs(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-P-multiple-outputs.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-P-multiple-outputs");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-P-multiple-outputs");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(18), "Medium", true);
@@ -241,7 +241,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyOutputOrder(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-O.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-O");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-O");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(70), "Medium", true);
@@ -256,7 +256,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyOutputOrderMultipleOutputs(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-O-multiple-outputs.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-O-multiple-outputs");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-O-multiple-outputs");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(18), "Medium", true);
@@ -281,7 +281,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     void simpleDecisionTableHitPolicyRuleOrder(VariantTestConf conf) {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-R.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-R");
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-R");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(70), "Medium", true);
@@ -310,7 +310,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
 
     private List<BigDecimal> executeTestDecisionTableHitPolicyCollect(final DMNContext context) {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime( "0004-simpletable-C.dmn", this.getClass());
-        final DMNModel dmnModel = runtime.getModel( "https://github.com/kiegroup/kie-dmn", "0004-simpletable-C");
+        final DMNModel dmnModel = runtime.getModel( "https://github.com/kubesmarts/kie-dmn", "0004-simpletable-C");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext result = evaluateSimpleTableWithContext(dmnModel, runtime, context);
@@ -333,7 +333,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
         testConfig = conf;
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime("0004-simpletable-C-sum-multiple-outputs.dmn", this.getClass());
         final DMNModel dmnModel =
-                runtime.getModel("https://github.com/kiegroup/kie-dmn", "0004-simpletable-C-sum-multiple-outputs");
+                runtime.getModel("https://github.com/kubesmarts/kie-dmn", "0004-simpletable-C-sum-multiple-outputs");
         assertThat(dmnModel).isNotNull();
 
         final DMNContext context = getSimpleTableContext(BigDecimal.valueOf(70), "Medium", true);
@@ -385,7 +385,7 @@ public class DMNDecisionTableHitPolicyTest extends BaseDMN1_1VariantTest {
     private void testSimpleDecisionTableHitPolicyCollectAggregateFunction(
             final String resourceName, final String modelName, final BigDecimal expectedResult, final DMNContext context) {
         final DMNRuntime runtime = DMNRuntimeUtil.createRuntime(resourceName, this.getClass());
-        final DMNModel dmnModel = runtime.getModel("https://github.com/kiegroup/kie-dmn", modelName);
+        final DMNModel dmnModel = runtime.getModel("https://github.com/kubesmarts/kie-dmn", modelName);
         assertThat(dmnModel).isNotNull();
 
         final DMNContext result = evaluateSimpleTableWithContext(dmnModel, runtime, context);
