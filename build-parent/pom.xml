@@ -102,7 +102,7 @@
     <version.org.hsqldb>2.7.1</version.org.hsqldb>
     <version.org.infinispan>15.0.21.Final</version.org.infinispan>
     <version.org.infinispan.protostream>5.0.13.Final</version.org.infinispan.protostream>
-    <version.org.javassist>3.26.0-GA</version.org.javassist>
+    <version.org.javassist>3.33.0-GA</version.org.javassist>
     <version.org.jboss.narayana.tomcat>7.2.2.Final</version.org.jboss.narayana.tomcat>
     <version.org.jboss.logging>3.6.1.Final</version.org.jboss.logging>
     <version.org.jboss.transaction.spi>8.0.0.Final</version.org.jboss.transaction.spi>
