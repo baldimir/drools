@@ -126,7 +126,6 @@
     <version.org.junit.jupiter>6.0.3</version.org.junit.jupiter>
     <version.org.junit.platform>6.0.3</version.org.junit.platform> <!-- JUnit 6 uses a unified version across all modules -->
     <version.org.mvel>2.5.4.Final</version.org.mvel>
-    <version.org.powermock>2.0.9</version.org.powermock>
     <version.org.slf4j>2.0.17</version.org.slf4j>
     <!-- simple-jndi is a small library that helps us avoid JNDI error messages during testing -->
     <version.simple-jndi>0.11.4.1</version.simple-jndi>
@@ -981,26 +980,6 @@
         <groupId>org.mvel</groupId>
         <artifactId>mvel2</artifactId>
         <version>${version.org.mvel}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.powermock</groupId>
-        <artifactId>powermock-api-mockito2</artifactId>
-        <version>${version.org.powermock}</version>
-        <exclusions>
-          <!-- mockito-all is ugly uberjar. Users of powermock need to depend on on mockito-core explicitly.
-     Once we upgrade powermock to version that contains https://github.com/jayway/powermock/pull/596, this
-     exclude can be removed, as wel as explit dependencies on mockito-core. -->
-          <exclusion>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.powermock</groupId>
-        <artifactId>powermock-module-junit4</artifactId>
-        <version>${version.org.powermock}</version>
       </dependency>
 
       <!-- Keep in sync with groupId ch.qos.logback -->
